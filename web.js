@@ -328,6 +328,7 @@ function gameChange(control) {
     localStorage.setItem("gameselect", gamevalue);
 	game = document.getElementById("gameselect").value;
 	stop();
+	document.getElementById("result").innerHTML = ""
 }
 
 function resetstats(){
