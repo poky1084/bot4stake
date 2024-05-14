@@ -265,6 +265,44 @@ function resetChart() {
     return drawChart();
 }
 
+function resetseed(e){
+
+ var client = e;
+ if(client == undefined){
+	client = randomString(10);
+ }
+var body = {
+		operationName:"RotateSeedPair",
+		variables:{
+        "seed": client
+		},
+		query:"mutation RotateSeedPair($seed: String!) {\n  rotateSeedPair(seed: $seed) {\n    clientSeed {\n      user {\n        id\n        activeClientSeed {\n          id\n          seed\n          __typename\n        }\n        activeServerSeed {\n          id\n          nonce\n          seedHash\n          nextSeedHash\n          __typename\n        }\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n"		}
+		
+	fetch('https://' +  window.location.host + '/_api/graphql', {
+		method: 'post',
+		body:    JSON.stringify(body),
+		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+	})
+	.then(res => res.json())
+	.then(json => outseed(json))
+	.catch(function(err, json) {
+		//console.log(err);
+		setTimeout(() => {
+			//initUser();							
+		}, "2000");
+	});
+}
+
+function outseed(json){
+	if(json.errors != undefined){
+		log(json.errors[0].errorType);
+	} else {
+		log("Seed has been reset.")
+	}
+
+}
+
+
 function userBalances(){
 
 var body = {
