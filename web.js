@@ -293,6 +293,7 @@ function stop(){
 	run_clicked = false;
 	stopped = true;
 	dobet = function() {}
+	btnStart.disabled = false; 
 }
 
 function resetAll(){
@@ -324,7 +325,7 @@ function gameChange(control) {
     let gamevalue = control.value
     localStorage.setItem("gameselect", gamevalue);
 	game = document.getElementById("gameselect").value;
-	startScoket();
+	stop();
 }
 
 function resetstats(){
