@@ -1,5 +1,5 @@
 # bot4stake  <br /> 
-a javascript coded bot for Stake, copy-paste in the console. (Dice, Limbo, Crash, Slide)
+a javascript coded bot for Stake, Primedice, copy-paste in the console. (Dice, Limbo, Crash, Slide)
 
 # Videos: <br /> 
 Install: https://www.youtube.com/watch?v=pdF74AwKwvw <br />
