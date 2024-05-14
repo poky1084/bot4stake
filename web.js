@@ -53,9 +53,11 @@ document.getElementsByTagName("head")[0].appendChild(tag6);
 var editor = ''
 
 setTimeout(() => {
-document.querySelectorAll('[data-test="left-sidebar"]')[0].remove();
-document.querySelectorAll('[data-test="home-button"]')[0].remove();
-
+	
+	if(window.location.host.includes("stake")){
+		document.querySelectorAll('[data-test="left-sidebar"]')[0].remove();
+		document.querySelectorAll('[data-test="home-button"]')[0].remove();
+	}
   editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
     mode: "javascript",
     lineNumbers: true,
