@@ -513,6 +513,7 @@ var body = {
 
 function outbals(json){
 
+	document.getElementById("wdbMenuCoin").innerHTML = "";
 	select = document.getElementById('wdbMenuCoin');
 	for (var i = 0; i < json.data.user.balances.length; i++)
 	{
