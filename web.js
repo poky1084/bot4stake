@@ -12,17 +12,7 @@ function randomString(length) {
 	for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
 	return result;
 }
- 
-function indexMatchingText(text) {
-    var opts = document.getElementById("wdbMenuCoin").options;
-	for(var i = 0; i < opts.length; i++) {
-		if(opts[i].innerText == text) {
-			return i;
-		}
-	}
-	return 0;
-}
- 
+
 function selectElement(id, valueToSelect) {    
     let element = document.getElementById(id);
     element.value = valueToSelect;
