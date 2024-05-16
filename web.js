@@ -170,6 +170,7 @@ function dataslide(json, betidentifier){
 	if(json.data.hasOwnProperty("multiplayerSlideBet")){
 		//console.log(json.data.multiplayerSlideBet.id)
 		gamelist[json.data.multiplayerSlideBet.id] = betidentifier
+		log("Slide bet placed. ID:" + betidentifier)
 		if(json.data.multiplayerCrashBet.hasOwnProperty("slideResult")){
 			if(json.data.multiplayerCrashBet.slideResult == "pending"){
 				bet_has_been_made = true;				
