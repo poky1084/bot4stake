@@ -18,27 +18,55 @@ function selectElement(id, valueToSelect) {
     element.value = valueToSelect;
 } 
 
- var head  = document.getElementsByTagName('head')[0];
-    var link  = document.createElement('link');
-    link.id   = "linkcss";
-    link.rel  = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css';
-    link.media = 'all';
-    head.appendChild(link);
-	
-	
-var tag1 = document.createElement("script");
-tag1.src = "https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js";
-document.getElementsByTagName("head")[0].appendChild(tag1);
 
-var tag5 = document.createElement("script");
-tag5.src = "https://cdn.jsdelivr.net/npm/chart.js";
-document.getElementsByTagName("head")[0].appendChild(tag5);
+function addJs(src, cb) {
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = src;
+    s.onload = cb;
+    document.head.appendChild(s);
+}
 
-var tag6 = document.createElement("script");
-tag6.src = "https://cdn.canvasjs.com/canvasjs.min.js";
-document.getElementsByTagName("head")[0].appendChild(tag6);
+function addCss(src, cb) {
+    var s = document.createElement('link');
+    s.rel = 'stylesheet';
+    s.href = src;
+    s.onload = cb;
+    document.head.appendChild(s);
+}
+
+function getMyJS(url, callback){
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', url, true);
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState !== 4) {
+			return
+		}
+		if (xhr.status === 200) { 
+			var s = document.createElement('script');
+			s.text = xhr.responseText;
+			document.body.appendChild(s);
+		} else {
+			console.log('Error', xhr.responseText);
+		}
+	};
+	xhr.onload = callback;
+	xhr.send();
+}
+	
+addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', () => {
+            addBot();
+})
+
+function addBot() {
+    addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css', () => {
+        addJs('https://canvasjs.com/assets/script/canvasjs.min.js', () => {
+			addJs('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/codemirror.min.js', () => {
+			})
+        })
+    })
+}
+
 
 var editor = ''
 
