@@ -2228,11 +2228,11 @@ function sTart(){
 		} else {
 			setTimeout(function () {
             DiceBet(amount, chance, bethigh)
-          }, 200);
+          }, 400);
 
           setTimeout(function () {
             DiceBet(amount, chance, bethigh)
-          }, 400);
+          }, 800);
 
 		}
 	} else if(selectedGame == "limbo"){
@@ -2241,11 +2241,11 @@ function sTart(){
 		} else {
 			setTimeout(function () {
             LimboBet(amount, 99 / chance); 
-          }, 200);
+          }, 400);
 
           setTimeout(function () {
             LimboBet(amount, 99 / chance); 
-          }, 400);
+          }, 800);
           
 		}
 	} else if(selectedGame == "crash"){
