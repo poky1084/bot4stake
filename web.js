@@ -2225,29 +2225,29 @@ function sTart(){
 			DiceBet(amount, chance, bethigh)
 		} else {
 			setTimeout(function () {
-            DiceBet(amount, target_multi);
+            DiceBet(amount, chance, bethigh)
           }, 200);
 
           setTimeout(function () {
-            DiceBet(amount, target_multi);
+            DiceBet(amount, chance, bethigh)
           }, 400);
 
 		}
 	} else if(selectedGame == "limbo"){
 		if(speedmode == false){
-			LimboBet(nextbet, 99 / chance);
+			LimboBet(amount, 99 / chance);
 		} else {
 			setTimeout(function () {
-            LimboBet(nextbet, 99 / chance); 
+            LimboBet(amount, 99 / chance); 
           }, 200);
 
           setTimeout(function () {
-            LimboBet(nextbet, 99 / chance); 
+            LimboBet(amount, 99 / chance); 
           }, 400);
           
 		}
 	} else if(selectedGame == "crash"){
-		crashbet(nextbet, target_multi);
+		crashbet(amount, target_multi);
 	} else if(selectedGame == "slide"){
 		dobet();
 	}
