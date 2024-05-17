@@ -55,17 +55,13 @@ function getMyJS(url, callback){
 }
 
 addJs('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/codemirror.min.js', () => {	
-      addScript();
-})
-
-function addScript() {
-	addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', () => {
-		addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css', () => {
-			addJs('https://canvasjs.com/assets/script/canvasjs.min.js', () => {
+	addJs('https://canvasjs.com/assets/script/canvasjs.min.js', () => {
+		addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', () => {
+			addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css', () => {
 			})
         })
     })
-}
+})
 
 
 var editor = ''
