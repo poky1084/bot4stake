@@ -55,26 +55,10 @@ function getMyJS(url, callback){
 }
 
 var editor = ''
-
-addJs('https://canvasjs.com/assets/script/canvasjs.min.js', () => {  
-	drawChart();
-})
-
-addJs('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/codemirror.min.js', () => {	
-
-	editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
-		mode: "javascript",
-		lineNumbers: true,
-	});
-	editor.save();
-	addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', () => {
-		addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css', () => {
-		})
-	})
-    
-})
-
-
+addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css', () => {})
+addJs('https://canvasjs.com/assets/script/canvasjs.min.js', () => {  })
+addJs('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/codemirror.min.js', () => {	})
+addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', () => {})
 
 
 setTimeout(() => {
@@ -86,7 +70,12 @@ setTimeout(() => {
 		}
 	}
   
-
+	editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+		mode: "javascript",
+		lineNumbers: true,
+	});
+	editor.save();
+drawChart();
 
 if(localStorage.getItem("jscode") != null){
 	editor.setValue(localStorage.getItem("jscode"));
