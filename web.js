@@ -180,10 +180,8 @@ winid = {}
 betidentifier = "identity01"
 bgChart = "#f0eded"
 
-let websocket = "";
-
 function startScoket(){
-	websocket = new WebSocket('wss://' + window.location.host + '/_api/websockets', 'graphql-transport-ws');
+	let websocket = new WebSocket('wss://' + window.location.host + '/_api/websockets', 'graphql-transport-ws');
     
   websocket.onopen = () => {
  
