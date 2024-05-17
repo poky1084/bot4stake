@@ -54,17 +54,28 @@ function getMyJS(url, callback){
 	xhr.send();
 }
 
+var editor = ''
+
+addJs('https://canvasjs.com/assets/script/canvasjs.min.js', () => {  
+	drawChart();
+})
+
 addJs('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/codemirror.min.js', () => {	
-	addJs('https://canvasjs.com/assets/script/canvasjs.min.js', () => {
-		addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', () => {
-			addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css', () => {
-			})
-        })
-    })
+
+	editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+		mode: "javascript",
+		lineNumbers: true,
+	});
+	editor.save();
+	addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', () => {
+		addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css', () => {
+		})
+	})
+    
 })
 
 
-var editor = ''
+
 
 setTimeout(() => {
 	
@@ -74,12 +85,8 @@ setTimeout(() => {
 		document.querySelectorAll('[data-test="home-button"]')[0].remove();
 		}
 	}
-  editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
-    mode: "javascript",
-    lineNumbers: true,
-});
-editor.save();
-drawChart();
+  
+
 
 if(localStorage.getItem("jscode") != null){
 	editor.setValue(localStorage.getItem("jscode"));
@@ -1371,7 +1378,7 @@ function sTart(){
 	} else if(selectedGame == "crash"){
 		crashbet(nextbet, target_multi);
 	} else if(selectedGame == "slide"){
-		slidebet(nextbet, chance, betidentifier)
+		dobet();
 	}
  
  drawChart();
