@@ -2205,12 +2205,12 @@ checkbox.addEventListener('change', (event) => {
 
 var btnStart = document.getElementById("wdbStartButton");
 
-btnStart.addEventListener('click', function() {  sTart();}, false);
+btnStart.addEventListener('click', function() {  start();}, false);
 
 var btnStop = document.getElementById("wdbStopButton");
 btnStop.addEventListener('click', function() {  btnStart.disabled = false; run_clicked = false; running = false; dobet = function(){} }, false);
 
-function sTart(){
+function start(){
 		running = true; countTime(); 
 		run_clicked = true;
 		eval(editor.getValue());	
@@ -2228,11 +2228,11 @@ function sTart(){
 		} else {
 			setTimeout(function () {
             DiceBet(amount, chance, bethigh)
-          }, 400);
+          }, 200);
 
           setTimeout(function () {
             DiceBet(amount, chance, bethigh)
-          }, 800);
+          }, 400);
 
 		}
 	} else if(selectedGame == "limbo"){
@@ -2241,11 +2241,11 @@ function sTart(){
 		} else {
 			setTimeout(function () {
             LimboBet(amount, 99 / chance); 
-          }, 400);
+          }, 200);
 
           setTimeout(function () {
             LimboBet(amount, 99 / chance); 
-          }, 800);
+          }, 400);
           
 		}
 	} else if(selectedGame == "crash"){
