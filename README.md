@@ -16,45 +16,52 @@ Please favourite the repo in case you liked/used it. Thank you!
 # Use: <br />
 
 <b>Plinko: </b>
-```game = "plinko"
+```javascript
+game = "plinko"
 rows = 8
 risk = "low" 
 ```
 <b>Keno:</b>
-```game = "keno"
+```javascript
+game = "keno"
 numbers = [1,2,3,4,5,6,7,8]
 risk = "low" 
 ```
 <b>Mines:</b>
-```game = "mines"
+```javascript
+game = "mines"
 fields = [1,2,3,4,5,6,7,8]
 mines = 3 
 ```
 <b>Limbo:</b>
-```game = "limbo"
+```javascript
+game = "limbo"
 chance = 49.5
 nextbet = 0 
 ```
 <b>Dice:</b>
-```game = "dice"
+```javascript
+game = "dice"
 chance = 49.5
 nextbet = 0
 bethigh = false
  ```
 <b>Crash:</b>
-```
+```javascript
 target = 1.5
 chance = 99 / target
 nextbet = 0 
 ```
 <b>Slide:</b>
-```
+```javascript
 nextbet = 0.01
 target = 1.5
 chance = 99 / target
 
-makebet(nextbet, chance, "identifier01")
-makebet(nextbet, chance, "identifier02")
-makebet(nextbet, chance, "identifier03")
+dobet = function(){
+ makebet(nextbet, chance, "identifier01")
+ makebet(nextbet, chance, "identifier02")
+ makebet(nextbet, chance, "identifier03")
+}
 ```
 
