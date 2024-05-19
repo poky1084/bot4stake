@@ -213,7 +213,7 @@ function startScoket(){
 						balance = current_balance;
 					}
 				} 
-				if(obj.payload.data.hasOwnProperty("crash") && document.getElementById("gameselect").value == "crash" ){
+				if(obj.payload.data.hasOwnProperty("crash") && game == "crash" ){
 					previousbet = amount;
 					
 					if(obj.payload.data.crash.event.status == "in_progress"){
@@ -566,7 +566,7 @@ function startScoket(){
 			
 								
 			}
-			if(obj.payload.data.hasOwnProperty("slide") && document.getElementById("gameselect").value == "slide"){
+			if(obj.payload.data.hasOwnProperty("slide") && game == "slide"){
 			
 					if(obj.payload.data.slide.event.status == "result" ){
 							previousbet = amount;
@@ -1032,7 +1032,7 @@ function startScoket(){
 }
 
 function makebet(n, y, betidentifier){
-	if(document.getElementById("gameselect").value == "slide"){
+	if(game == "slide"){
 		makecount++;
 		slidebet(n, y, betidentifier)
 	}
