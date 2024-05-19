@@ -622,7 +622,7 @@ function startScoket(){
 							row.appendChild(tdbets);
 							row.appendChild(tdNonce);
 							row.appendChild(tdamount);
-							row.appendChild(tdhigh);
+							//row.appendChild(tdhigh);
 							row.appendChild(tdTargetChance);
 							row.appendChild(tdProfit);
 							row.appendChild(tdPayout);
