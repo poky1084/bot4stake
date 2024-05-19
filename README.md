@@ -15,6 +15,8 @@ Please favourite the repo in case you liked/used it. Thank you!
 
 # Use: <br />
 
+<b>functions:</b> `resetseed(), resetstats(), vault(amount), start(), stop()`
+
 <b>Plinko: </b>
 ```javascript
 game = "plinko"
