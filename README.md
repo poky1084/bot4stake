@@ -1,5 +1,5 @@
 # bot4stake  <br /> 
-a javascript coded bot for Stake, Primedice, copy-paste in the console. (Dice, Limbo, Crash, Slide, Keno, Plinko, Mines)
+a javascript coded bot for Stake, Primedice, copy-paste in the console. (Dice, Limbo, Crash, Slide, Keno, Plinko, Mines)<br />
 the script must be coded in javascript, and not Lua script. 
 
 # Videos: <br /> 
