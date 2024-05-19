@@ -18,23 +18,23 @@ Please favourite the repo in case you liked/used it. Thank you!
 <b>Plinko: </b>
 ```game = "plinko"
 rows = 8
-risk = "low" ```
-
+risk = "low" 
+```
 <b>Keno:</b>
 ```game = "keno"
 numbers = [1,2,3,4,5,6,7,8]
-risk = "low" ```
-
+risk = "low" 
+```
 <b>Mines:</b>
 ```game = "mines"
 fields = [1,2,3,4,5,6,7,8]
-mines = 3 ```
-
+mines = 3 
+```
 <b>Limbo:</b>
 ```game = "limbo"
 chance = 49.5
-nextbet = 0 ```
-
+nextbet = 0 
+```
 <b>Dice:</b>
 ```game = "dice"
 chance = 49.5
@@ -45,8 +45,8 @@ bethigh = false
 ```
 target = 1.5
 chance = 99 / target
-nextbet = 0 ```
-
+nextbet = 0 
+```
 <b>Slide:</b>
 ```
 nextbet = 0.01
