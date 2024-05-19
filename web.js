@@ -2953,6 +2953,7 @@ btnStop.addEventListener('click', function() {  btnStart.disabled = false; run_c
 function start(){
 		running = true; countTime(); 
 		run_clicked = true;
+		game = document.getElementById("gameselect").value;
 		eval(editor.getValue());	
 	kenorisk = risk
 	kenoselected = numbers
@@ -2962,11 +2963,11 @@ function start(){
 	plinkorisk = risk
 	localStorage.setItem("jscode", editor.getValue());
  currency = document.getElementById('wdbMenuCoin').value;
- game = document.getElementById("gameselect").value;
+ 
  btnStart.disabled = true;  
  started_bal = balance; 
  amount = nextbet;
-	var selectedGame = document.getElementById("gameselect").value;
+	var selectedGame = game;
 	if(selectedGame == "dice"){
 		if(speedmode == false){
 			DiceBet(amount, chance, bethigh)
