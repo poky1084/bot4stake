@@ -1828,10 +1828,7 @@ function data(json){
 			lastBet.percent = (profit_total / started_bal * 100)
 			
 
-			dobet();
-			plinkorisk = risk
-			plinkorows = rows
-			amount = nextbet;
+
 			
 			lastBet.amount = json.data.plinkoBet.amount;
 			
@@ -2042,10 +2039,7 @@ function data(json){
 			lastBet.percent = (profit_total / started_bal * 100)
 			
 
-			dobet();
-			kenorisk = risk
-			kenoselected = numbers
-			amount = nextbet;
+
 			
 			lastBet.amount = json.data.kenoBet.amount;
 			
@@ -2253,10 +2247,7 @@ function data(json){
 			lastBet.percent = (profit_total / started_bal * 100)
 			
 
-			dobet();
-			minecount = mines
-			fieldcount = fields
-			amount = nextbet;
+
 			
 			lastBet.amount = json.data.minesBet.amount;
 			
@@ -2472,11 +2463,9 @@ function data(json){
 			lastBet.percent = (profit_total / started_bal * 100)
 			
 
-			dobet();
+			//dobet();
 
-			amount = nextbet;
-			
-			target_multi = 99 / chance;
+
 			lastBet.amount = json.data.primediceRoll.amount;
 			lastBet.target = json.data.primediceRoll.state.target;
 			
@@ -2689,11 +2678,7 @@ function data(json){
 								
 			
 			lastBet.percent = (profit_total / started_bal * 100)
-			
-			dobet();
-			amount = nextbet;
-			
-			target_multi = 99 / chance;
+
 			lastBet.amount = json.data.diceRoll.amount;
 			lastBet.target = json.data.diceRoll.state.target;
 			
@@ -2882,14 +2867,24 @@ function data(json){
 			lastBet.percent = (profit_total / started_bal * 100)
 			
 
-			dobet();
-			amount = nextbet;
 			
-			target_multi = 99 / chance;
 			lastBet.amount = json.data.limboBet.amount;
 			lastBet.target = json.data.limboBet.state.multiplierTarget;
 			
 		}
+		
+		dobet();
+		amount = nextbet;
+		target_multi = 99 / chance;
+					
+		minecount = mines
+		fieldcount = fields
+		
+		kenorisk = risk
+		kenoselected = numbers
+
+		plinkorisk = risk
+		plinkorows = rows	
 		
 		if(game == "plinko"){
 		plinkobet(amount, plinkorows, plinkorisk)
