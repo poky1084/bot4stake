@@ -2955,6 +2955,7 @@ btnStop.addEventListener('click', function() {  btnStart.disabled = false; run_c
 function start(){
 		running = true; countTime(); 
 		run_clicked = true;
+		document.getElementById("result").innerHTML = "";
 		game = document.getElementById("gameselect").value;
 		eval(editor.getValue());	
 	kenorisk = risk
