@@ -10,4 +10,4 @@ Please favourite the repo in case you liked/used it. Thank you!
 
 <b>Discord</b>: fisk_992 <br />
 <b>Stake</b>: poky1084 <br />
-<b>Telegran:</b>: @poky_1084
+<b>Telegram:</b>: @poky_1084
