@@ -279,7 +279,7 @@ function startScoket(){
 								tdTargetNumber.innerHTML = ">" + target_multi.toFixed(4)
 								lastBet.targetNumber = target_multi;
 								tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4);
-								tdNonce.innerHTML = localStorage.getItem("gameselect");
+								tdNonce.innerHTML = game;
 								tdBetID.innerHTML = "-";
 								tdPayout.innerHTML = (0).toFixed(8);
 								
@@ -427,7 +427,7 @@ function startScoket(){
 								tdTargetNumber.innerHTML = ">" + target_multi.toFixed(4)
 								//lastBet.targetNumber = obj.payload.data.crash.event.cashoutAt;
 								tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4);
-								tdNonce.innerHTML = localStorage.getItem("gameselect");
+								tdNonce.innerHTML = game;
 								tdBetID.innerHTML = obj.payload.data.crash.event.id;
 								tdPayout.innerHTML = parseFloat(amount * target_multi).toFixed(8);
 								
@@ -615,7 +615,7 @@ function startScoket(){
 							tdTargetNumber.innerHTML = "-"
 							//lastBet.targetNumber = target_multi;
 							tdRollNumber.innerHTML = lastBet.crashAt;
-							tdNonce.innerHTML = localStorage.getItem("gameselect");
+							tdNonce.innerHTML = game;
 							tdBetID.innerHTML = "-";
 							tdPayout.innerHTML = "-";
 							
@@ -724,7 +724,7 @@ function startScoket(){
 								tdTargetNumber.innerHTML = ">" + obj.payload.data.slide.event.cashoutAt.toFixed(4)
 								//lastBet.targetNumber = target_multi;
 								tdRollNumber.innerHTML = lastBet.crashAt;
-								tdNonce.innerHTML = localStorage.getItem("gameselect");
+								tdNonce.innerHTML = game;
 								tdBetID.innerHTML = obj.payload.data.slide.event.gameId;
 								tdPayout.innerHTML = obj.payload.data.slide.event.payout.toFixed(8);
 								
@@ -860,7 +860,7 @@ function startScoket(){
 								tdTargetNumber.innerHTML = ">" + obj.payload.data.slide.event.cashoutAt.toFixed(4)
 								//lastBet.targetNumber = target_multi;
 								tdRollNumber.innerHTML = lastBet.crashAt;
-								tdNonce.innerHTML = localStorage.getItem("gameselect");
+								tdNonce.innerHTML = game;
 								tdBetID.innerHTML = obj.payload.data.slide.event.gameId;
 								tdPayout.innerHTML = obj.payload.data.slide.event.payout.toFixed(8);
 								row.appendChild(tdbets);
@@ -1053,6 +1053,7 @@ function dataslide(json, betidentifier){
 
 function datacrash(json){
 	if(json.data.hasOwnProperty("multiplayerCrashBet")){
+		log("crash bet placed.")
 		if(json.data.multiplayerCrashBet.hasOwnProperty("result")){
 			if(json.data.multiplayerCrashBet.result == "pending"){
 				bet_has_been_made = true;
