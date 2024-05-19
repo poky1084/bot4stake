@@ -1,5 +1,6 @@
 # bot4stake  <br /> 
 a javascript coded bot for Stake, Primedice, copy-paste in the console. (Dice, Limbo, Crash, Slide, Keno, Plinko, Mines)
+the script must be coded in javascript, and not Lua script. 
 
 # Videos: <br /> 
 Install: https://cos.tv/videos/play/52855058251682816 <br />
