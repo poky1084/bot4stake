@@ -2886,15 +2886,20 @@ function data(json){
 		plinkorisk = risk
 		plinkorows = rows	
 		
+		
 		if(game == "plinko"){
 		plinkobet(amount, plinkorows, plinkorisk)
-		} else if(game == "mines"){
+		} 
+		if(game == "mines"){
 		minebet(amount, fieldcount, minecount)
-		} else if(game == "keno"){
+		}
+		if(game == "keno"){
 		kenobet(amount, kenoselected, kenorisk)
-		} else if(game == "dice"){
+		}
+		if(game == "dice"){
 		DiceBet(amount, chance, bethigh)
-		} else if(game == "limbo"){
+		}
+		if(game == "limbo"){
 		LimboBet(amount, target_multi);
 		}
 	}
