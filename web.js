@@ -253,7 +253,7 @@ function startScoket(){
 								
 								var tdbets = document.createElement("td");
 								var tdamount = document.createElement("td");
-								//var tdhigh = document.createElement("td");
+								var tdhigh = document.createElement("td");
 								var tdTargetChance = document.createElement("td");
 								var tdRollChance= document.createElement("td");
 								var tdProfit = document.createElement("td");
@@ -266,27 +266,29 @@ function startScoket(){
 								tdbets.innerHTML = wins + losses;
 								tdamount.innerHTML = amount.toFixed(8)
 								
-								/*var tdcheck = document.createElement("input");
+								var tdcheck = document.createElement("input");
 								tdcheck.type = "checkbox";
 								tdcheck.name = "checked";
 								tdcheck.checked = "checked";
-								tdcheck.id = "checked";*/
+								tdcheck.id = "checked";
 								
-								//tdhigh.appendChild(tdcheck);
-								tdTargetChance.innerHTML = (99 / target_multi).toFixed(4)
-								tdRollChance.innerHTML = (99 / lastBet.crashAt).toFixed(4)
+								tdhigh.appendChild(tdcheck);
+								tdTargetChance.innerHTML = (0).toFixed(4) + "x"
+								tdRollChance.innerHTML = ""
 								tdProfit.innerHTML = current_profit.toFixed(8)
 								tdTargetNumber.innerHTML = ">" + target_multi.toFixed(4)
 								lastBet.targetNumber = target_multi;
-								tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4);
+								tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4) + "x"
 								tdNonce.innerHTML = game;
-								tdBetID.innerHTML = "-";
-								tdPayout.innerHTML = (0).toFixed(8);
+								tdBetID.innerHTML = "";
+								tdPayout.innerHTML = ""
+								
+								
 								
 								row.appendChild(tdbets);
 								row.appendChild(tdNonce);
 								row.appendChild(tdamount);
-								//row.appendChild(tdhigh);
+								row.appendChild(tdhigh);
 								row.appendChild(tdTargetChance);
 								row.appendChild(tdProfit);
 								row.appendChild(tdPayout);
@@ -401,7 +403,7 @@ function startScoket(){
 							
 								var tdbets = document.createElement("td");
 								var tdamount = document.createElement("td");
-								//var tdhigh = document.createElement("td");
+								var tdhigh = document.createElement("td");
 								var tdTargetChance = document.createElement("td");
 								var tdRollChance= document.createElement("td");
 								var tdProfit = document.createElement("td");
@@ -414,27 +416,29 @@ function startScoket(){
 								tdbets.innerHTML = wins + losses;
 								tdamount.innerHTML = amount.toFixed(8)
 								
-								/*var tdcheck = document.createElement("input");
+								var tdcheck = document.createElement("input");
 								tdcheck.type = "checkbox";
 								tdcheck.name = "checked";
 								tdcheck.checked = "checked";
-								tdcheck.id = "checked";*/
+								tdcheck.id = "checked";
 								
-								//tdhigh.appendChild(tdcheck);
-								tdTargetChance.innerHTML = (99 / target_multi).toFixed(4)
-								tdRollChance.innerHTML = (99 / lastBet.crashAt).toFixed(4)
+								tdhigh.appendChild(tdcheck);
+								tdTargetChance.innerHTML = target_multi.toFixed(4) + "x"
+								tdRollChance.innerHTML = ""
 								tdProfit.innerHTML = current_profit.toFixed(8)
 								tdTargetNumber.innerHTML = ">" + target_multi.toFixed(4)
 								//lastBet.targetNumber = obj.payload.data.crash.event.cashoutAt;
-								tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4);
+								tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4) + "x";
 								tdNonce.innerHTML = game;
 								tdBetID.innerHTML = obj.payload.data.crash.event.id;
 								tdPayout.innerHTML = parseFloat(amount * target_multi).toFixed(8);
 								
+
+								
 								row.appendChild(tdbets);
 								row.appendChild(tdNonce);
 								row.appendChild(tdamount);
-								//row.appendChild(tdhigh);
+								row.appendChild(tdhigh);
 								row.appendChild(tdTargetChance);
 								row.appendChild(tdProfit);
 								row.appendChild(tdPayout);
@@ -589,7 +593,7 @@ function startScoket(){
 							
 							var tdbets = document.createElement("td");
 							var tdamount = document.createElement("td");
-							//var tdhigh = document.createElement("td");
+							var tdhigh = document.createElement("td");
 							var tdTargetChance = document.createElement("td");
 							var tdRollChance= document.createElement("td");
 							var tdProfit = document.createElement("td");
@@ -602,27 +606,28 @@ function startScoket(){
 							tdbets.innerHTML = betcount;
 							tdamount.innerHTML = "SlideAt"
 							
-							/*var tdcheck = document.createElement("input");
+							var tdcheck = document.createElement("input");
 							tdcheck.type = "checkbox";
 							tdcheck.name = "checked";
 							tdcheck.checked = "checked";
-							tdcheck.id = "checked";*/
+							tdcheck.id = "checked";
 							
-							//tdhigh.appendChild(tdcheck);
-							tdTargetChance.innerHTML = ""
-							tdRollChance.innerHTML = (99 / lastBet.crashAt).toFixed(4);
-							tdProfit.innerHTML = "-"
-							tdTargetNumber.innerHTML = "-"
+							tdhigh.appendChild(tdcheck);
+							tdTargetChance.innerHTML = lastBet.crashAt.toFixed(4) + "x";
+							tdRollChance.innerHTML = ""
+							tdProfit.innerHTML = ""
+							tdTargetNumber.innerHTML = ""
 							//lastBet.targetNumber = target_multi;
-							tdRollNumber.innerHTML = lastBet.crashAt;
+							tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4) + "x";
 							tdNonce.innerHTML = game;
-							tdBetID.innerHTML = "-";
-							tdPayout.innerHTML = "-";
+							tdBetID.innerHTML = "";
+							tdPayout.innerHTML = "";
+							
 							
 							row.appendChild(tdbets);
 							row.appendChild(tdNonce);
 							row.appendChild(tdamount);
-							//row.appendChild(tdhigh);
+							row.appendChild(tdhigh);
 							row.appendChild(tdTargetChance);
 							row.appendChild(tdProfit);
 							row.appendChild(tdPayout);
@@ -698,7 +703,7 @@ function startScoket(){
 
 								var tdbets = document.createElement("td");
 								var tdamount = document.createElement("td");
-								//var tdhigh = document.createElement("td");
+								var tdhigh = document.createElement("td");
 								var tdTargetChance = document.createElement("td");
 								var tdRollChance= document.createElement("td");
 								var tdProfit = document.createElement("td");
@@ -711,27 +716,28 @@ function startScoket(){
 								tdbets.innerHTML = betcount;
 								tdamount.innerHTML = obj.payload.data.slide.event.amount.toFixed(8)
 								
-								/*var tdcheck = document.createElement("input");
+								var tdcheck = document.createElement("input");
 								tdcheck.type = "checkbox";
 								tdcheck.name = "checked";
 								tdcheck.checked = "checked";
-								tdcheck.id = "checked";*/
+								tdcheck.id = "checked";
 								
-								//tdhigh.appendChild(tdcheck);
-								tdTargetChance.innerHTML = (99 / obj.payload.data.slide.event.cashoutAt).toFixed(4)
-								tdRollChance.innerHTML = (99 / lastBet.crashAt).toFixed(4);
+								tdhigh.appendChild(tdcheck);
+								tdTargetChance.innerHTML = obj.payload.data.slide.event.cashoutAt.toFixed(4) + "x"
+								tdRollChance.innerHTML = ""
 								tdProfit.innerHTML = current_profit.toFixed(8)
-								tdTargetNumber.innerHTML = ">" + obj.payload.data.slide.event.cashoutAt.toFixed(4)
+								tdTargetNumber.innerHTML = ">" + obj.payload.data.slide.event.cashoutAt.toFixed(4) + "x";
 								//lastBet.targetNumber = target_multi;
-								tdRollNumber.innerHTML = lastBet.crashAt;
+								tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4) + "x";
 								tdNonce.innerHTML = game;
 								tdBetID.innerHTML = obj.payload.data.slide.event.gameId;
 								tdPayout.innerHTML = obj.payload.data.slide.event.payout.toFixed(8);
-								
+
+			
 								row.appendChild(tdbets);
 								row.appendChild(tdNonce);
 								row.appendChild(tdamount);
-								//row.appendChild(tdhigh);
+								row.appendChild(tdhigh);
 								row.appendChild(tdTargetChance);
 								row.appendChild(tdProfit);
 								row.appendChild(tdPayout);
@@ -834,7 +840,7 @@ function startScoket(){
 								
 								var tdbets = document.createElement("td");
 								var tdamount = document.createElement("td");
-								//var tdhigh = document.createElement("td");
+								var tdhigh = document.createElement("td");
 								var tdTargetChance = document.createElement("td");
 								var tdRollChance= document.createElement("td");
 								var tdProfit = document.createElement("td");
@@ -847,26 +853,28 @@ function startScoket(){
 								tdbets.innerHTML = betcount;
 								tdamount.innerHTML = obj.payload.data.slide.event.amount.toFixed(8)
 								
-								/*var tdcheck = document.createElement("input");
+								var tdcheck = document.createElement("input");
 								tdcheck.type = "checkbox";
 								tdcheck.name = "checked";
 								tdcheck.checked = "checked";
-								tdcheck.id = "checked";*/
+								tdcheck.id = "checked";
 								
-								//tdhigh.appendChild(tdcheck);
-								tdTargetChance.innerHTML = (99 / obj.payload.data.slide.event.cashoutAt).toFixed(4)
-								tdRollChance.innerHTML = (99 / lastBet.crashAt).toFixed(4);
+								tdhigh.appendChild(tdcheck);
+								tdTargetChance.innerHTML = (obj.payload.data.slide.event.cashoutAt).toFixed(4) + "x";
+								tdRollChance.innerHTML = ""
 								tdProfit.innerHTML = current_profit.toFixed(8)
-								tdTargetNumber.innerHTML = ">" + obj.payload.data.slide.event.cashoutAt.toFixed(4)
+								tdTargetNumber.innerHTML = ">" + obj.payload.data.slide.event.cashoutAt.toFixed(4) + "x";
 								//lastBet.targetNumber = target_multi;
-								tdRollNumber.innerHTML = lastBet.crashAt;
+								tdRollNumber.innerHTML = lastBet.crashAt + "x";
 								tdNonce.innerHTML = game;
 								tdBetID.innerHTML = obj.payload.data.slide.event.gameId;
 								tdPayout.innerHTML = obj.payload.data.slide.event.payout.toFixed(8);
+								
+								
 								row.appendChild(tdbets);
 								row.appendChild(tdNonce);
 								row.appendChild(tdamount);
-								//row.appendChild(tdhigh);
+								row.appendChild(tdhigh);
 								row.appendChild(tdTargetChance);
 								row.appendChild(tdProfit);
 								row.appendChild(tdPayout);
