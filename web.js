@@ -347,7 +347,7 @@ function startScoket(){
 								var tdNonce = document.createElement("td");
 								var tdBetID = document.createElement("td");
 								
-								tdbets.innerHTML = wins + losses;
+								tdbets.innerHTML = betcount;
 								tdamount.innerHTML = amount.toFixed(8)
 								
 								var tdcheck = document.createElement("input");
@@ -500,7 +500,7 @@ function startScoket(){
 								var tdNonce = document.createElement("td");
 								var tdBetID = document.createElement("td");
 								
-								tdbets.innerHTML = wins + losses;
+								tdbets.innerHTML = betcount;
 								tdamount.innerHTML = amount.toFixed(8)
 								
 								var tdcheck = document.createElement("input");
