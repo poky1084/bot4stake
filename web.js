@@ -271,7 +271,7 @@ function startScoket(){
 							var tdNonce = document.createElement("td");
 							var tdBetID = document.createElement("td");
 							
-							tdbets.innerHTML = betcount;
+							tdbets.innerHTML = ""
 							tdamount.innerHTML = "CrashAt"
 							
 							var tdcheck = document.createElement("input");
@@ -690,7 +690,7 @@ function startScoket(){
 							var tdNonce = document.createElement("td");
 							var tdBetID = document.createElement("td");
 							
-							tdbets.innerHTML = betcount;
+							tdbets.innerHTML = "";
 							tdamount.innerHTML = "SlideAt"
 							
 							var tdcheck = document.createElement("input");
