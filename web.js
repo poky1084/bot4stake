@@ -238,11 +238,13 @@ function startScoket(){
 					previousbet = amount;
 					
 					if(obj.payload.data.crash.event.status == "in_progress"){
+							document.getElementById("result").style.color = "black";
 							document.getElementById("result").innerHTML = obj.payload.data.crash.event.multiplier.toFixed(2) + 'x'
 					}
 					
 					
 						if(obj.payload.data.crash.event.status == "crash"){
+							document.getElementById("result").style.color = "black";
 							document.getElementById("result").innerHTML = "Crash at " + obj.payload.data.crash.event.multiplier.toFixed(2);
 							//var prog = document.getElementById("progress");
 							//var elem = document.getElementById("myBar");
@@ -661,6 +663,7 @@ function startScoket(){
 			
 					if(obj.payload.data.slide.event.status == "result" ){
 							previousbet = amount;
+							document.getElementById("result").style.color = "black";
 							document.getElementById("result").innerHTML = "Slide at " + obj.payload.data.slide.event.multiplier.toFixed(2);
 							//var prog = document.getElementById("progress");
 							//var elem = document.getElementById("myBar");
@@ -1766,7 +1769,8 @@ function data(json){
 				winstreak++;
 				wins++;
 				losestreak = 0;
-					
+				document.getElementById("result").innerHTML = json.data.plinkoBet.payoutMultiplier.toFixed(2) + "x"
+				document.getElementById("result").style.color = color
 			} else {
 
 				win = false;
@@ -1775,7 +1779,8 @@ function data(json){
 				losses++;
 				losestreak++;
 				winstreak = 0;
-				
+				document.getElementById("result").innerHTML = json.data.plinkoBet.payoutMultiplier.toFixed(2) + "x"
+				document.getElementById("result").style.color = color
 											
 			} 
 		
@@ -1974,7 +1979,8 @@ function data(json){
 				winstreak++;
 				wins++;
 				losestreak = 0;
-					
+				document.getElementById("result").innerHTML = json.data.kenoBet.payoutMultiplier.toFixed(2) + "x"
+				document.getElementById("result").style.color = color
 			} else {
 
 				win = false;
@@ -1983,7 +1989,8 @@ function data(json){
 				losses++;
 				losestreak++;
 				winstreak = 0;
-				
+				document.getElementById("result").innerHTML = json.data.kenoBet.payoutMultiplier.toFixed(2) + "x"
+				document.getElementById("result").style.color = color
 											
 			} 
 		
@@ -2188,7 +2195,8 @@ function data(json){
 				winstreak++;
 				wins++;
 				losestreak = 0;
-					
+				document.getElementById("result").innerHTML = json.data.minesBet.payoutMultiplier.toFixed(2) + "x"
+				document.getElementById("result").style.color = color
 			} else {
 
 				win = false;
@@ -2197,7 +2205,8 @@ function data(json){
 				losses++;
 				losestreak++;
 				winstreak = 0;
-				
+				document.getElementById("result").innerHTML = json.data.minesBet.payoutMultiplier.toFixed(2) + "x"
+				document.getElementById("result").style.color = color
 											
 			} 
 		
@@ -2397,7 +2406,8 @@ function data(json){
 				winstreak++;
 				wins++;
 				losestreak = 0;
-					
+				document.getElementById("result").innerHTML = json.data.primediceRoll.state.result.toFixed(2)
+				document.getElementById("result").style.color = color
 			} else {
 
 				win = false;
@@ -2406,7 +2416,8 @@ function data(json){
 				losses++;
 				losestreak++;
 				winstreak = 0;
-				
+				document.getElementById("result").innerHTML = json.data.primediceRoll.state.result.toFixed(2)
+				document.getElementById("result").style.color = color
 											
 			} 
 		
@@ -2614,7 +2625,8 @@ function data(json){
 				winstreak++;
 				wins++;
 				losestreak = 0;
-					
+				document.getElementById("result").innerHTML = json.data.diceRoll.state.result.toFixed(2)
+				document.getElementById("result").style.color = color	
 			} else {
 
 				win = false;
@@ -2623,7 +2635,8 @@ function data(json){
 				losses++;
 				losestreak++;
 				winstreak = 0;
-				
+				document.getElementById("result").innerHTML = json.data.diceRoll.state.result.toFixed(2)
+				document.getElementById("result").style.color = color
 											
 			} 
 		
@@ -2806,6 +2819,8 @@ function data(json){
 			lastBet.payout = json.data.limboBet.payout;
 			lastBet.target = json.data.limboBet.state.multiplierTarget;
 			
+			
+			
 			if(json.data.limboBet.payoutMultiplier > 0){
 				win = true;
 				lastBet.win = true;
@@ -2814,7 +2829,8 @@ function data(json){
 				winstreak++;
 				wins++;
 				losestreak = 0;
-					
+				document.getElementById("result").innerHTML = json.data.limboBet.state.result.toFixed(2) + "x"
+				document.getElementById("result").style.color = color
 			} else {
 
 				win = false;
@@ -2823,7 +2839,8 @@ function data(json){
 				losses++;
 				losestreak++;
 				winstreak = 0;
-				
+				document.getElementById("result").innerHTML = json.data.limboBet.state.result.toFixed(2) + "x"
+				document.getElementById("result").style.color = color
 											
 			} 
 		
@@ -3059,6 +3076,7 @@ function start(){
 		running = true; countTime(); 
 		run_clicked = true;
 		document.getElementById("result").innerHTML = "";
+		document.getElementById("result").style.color = "black";
 		game = document.getElementById("gameselect").value;
 		eval(editor.getValue());	
 	kenorisk = risk
