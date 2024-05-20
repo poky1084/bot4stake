@@ -3070,7 +3070,7 @@ btnStart.addEventListener('click', function() {  start();}, false);
 var btnStop = document.getElementById("wdbStopButton");
 btnStop.addEventListener('click', function() {  btnStart.disabled = false; run_clicked = false; running = false; dobet = function(){} }, false);
 
-setInterval(function () {localStorage.setItem("jscode", editor.getValue());}, 5000);
+//setInterval(function () {localStorage.setItem("jscode", editor.getValue());}, 5000);
 
 
 function start(){
