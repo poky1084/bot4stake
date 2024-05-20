@@ -248,9 +248,69 @@ function startScoket(){
 							//var elem = document.getElementById("myBar");
 							//prog.style.display = "none";
 							//elem.style.width = "0%";
-							betcount++;
-							bets = betcount;
+							//betcount++;
+							//bets = betcount;
 							lastBet.crashAt = obj.payload.data.crash.event.multiplier;
+							
+							
+							var row = document.createElement("tr");
+							//betcount++;
+							row.style.background = "#e8e9eb";
+							win = null
+							lastBet.win = null
+							
+							var tdbets = document.createElement("td");
+							var tdamount = document.createElement("td");
+							var tdhigh = document.createElement("td");
+							var tdTargetChance = document.createElement("td");
+							var tdRollChance= document.createElement("td");
+							var tdProfit = document.createElement("td");
+							var tdPayout = document.createElement("td");
+							var tdTargetNumber = document.createElement("td");
+							var tdRollNumber = document.createElement("td");
+							var tdNonce = document.createElement("td");
+							var tdBetID = document.createElement("td");
+							
+							tdbets.innerHTML = betcount;
+							tdamount.innerHTML = "CrashAt"
+							
+							var tdcheck = document.createElement("input");
+							tdcheck.type = "checkbox";
+							tdcheck.name = "checked";
+							tdcheck.checked = "checked";
+							tdcheck.id = "checked";
+							
+							tdhigh.appendChild(tdcheck);
+							tdTargetChance.innerHTML = lastBet.crashAt.toFixed(4) + "x";
+							tdRollChance.innerHTML = ""
+							tdProfit.innerHTML = ""
+							tdTargetNumber.innerHTML = ""
+							//lastBet.targetNumber = target_multi;
+							tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4) + "x";
+							tdNonce.innerHTML = game;
+							tdBetID.innerHTML = "";
+							tdPayout.innerHTML = "";
+							
+							
+							row.appendChild(tdbets);
+							row.appendChild(tdNonce);
+							row.appendChild(tdamount);
+							row.appendChild(tdhigh);
+							row.appendChild(tdTargetChance);
+							row.appendChild(tdProfit);
+							row.appendChild(tdPayout);
+							row.appendChild(tdTargetNumber);
+							row.appendChild(tdRollNumber);
+							row.appendChild(tdRollChance);
+							row.appendChild(tdBetID);
+							var table = document.getElementById("wdbHistory");							
+							table.prepend(row);
+			
+							if (table.rows.length > 50)
+							{
+								table.deleteRow(table.rows.length - 1);
+							}
+							
 							if(cashedoutauto == false && bet_has_been_made){
 								bet_has_been_made = false;
 								color = "#f72a42"
@@ -265,6 +325,9 @@ function startScoket(){
 								lastBet.win = false;
 								lastBet.amount = previousbet;
 								lastBet.payoutMultiplier = 0;
+								
+								betcount++;
+								bets = betcount;
 								
 								var row = document.createElement("tr");
 							
@@ -410,6 +473,9 @@ function startScoket(){
 								winstreak++;
 								wins++;
 								losestreak = 0;
+								betcount++;
+								bets = betcount;
+								
 							
 								current_profit = parseFloat(amount * target_multi) - parseFloat(amount);
 								profit_total += parseFloat(amount * target_multi) - parseFloat(amount);
@@ -881,7 +947,7 @@ function startScoket(){
 								tdcheck.id = "checked";
 								
 								tdhigh.appendChild(tdcheck);
-								tdTargetChance.innerHTML = (obj.payload.data.slide.event.cashoutAt).toFixed(4) + "x";
+								tdTargetChance.innerHTML = (0).toFixed(4) + "x";
 								tdRollChance.innerHTML = ""
 								tdProfit.innerHTML = current_profit.toFixed(8)
 								tdTargetNumber.innerHTML = ">" + obj.payload.data.slide.event.cashoutAt.toFixed(4) + "x";
