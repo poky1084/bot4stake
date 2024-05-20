@@ -17,6 +17,17 @@ Please favourite the repo in case you liked/used it. Thank you!
 
 <b>functions:</b> `resetseed(clientseed), resetstats(), vault(amount), log(text), start(), stop(), resetChart(), deleteLogs()`
 
+!!the strategy must be in `dobet()` method, and `dobet()` must be declared like this:!!
+```javascript
+nextbet = 0.00001 //in crypto format, not USD
+chance = 98
+
+dobet = function(){
+ //strategy code
+}
+```
+
+
 <b>Plinko: </b>
 ```javascript
 game = "plinko"
