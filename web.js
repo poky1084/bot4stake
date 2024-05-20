@@ -77,6 +77,7 @@ setTimeout(() => {
 	
 	editor.save();
 	editor.setSize(530, 300);
+	
 drawChart();
 
 if(localStorage.getItem("jscode") != null){
@@ -104,6 +105,8 @@ if (localStorage.getItem("themebot") != null) {
 		document.getElementById("window").style.background="#383838";
 		document.getElementById("wdbLog").style.background="#383838";
 		document.getElementById("window").style.color="white";
+		document.getElementsByClassName("CodeMirror")[0].style.background = "#383838"
+		document.getElementsByClassName("CodeMirror")[0].style.color = "white"
 	} else {
 		bgChart = "#f0eded"
 		drawChart();
@@ -111,8 +114,12 @@ if (localStorage.getItem("themebot") != null) {
 		document.getElementById("window").style.background="#f0eded";
 		document.getElementById("wdbLog").style.background="#f0eded";
 		document.getElementById("window").style.color="black";
+		document.getElementsByClassName("CodeMirror")[0].style.background = "white"
+		document.getElementsByClassName("CodeMirror")[0].style.color = "black"
+		
 	}
 }
+
 
 userBalances();
 startScoket();
@@ -1237,6 +1244,8 @@ function themeChange(control) {
 		document.getElementById("window").style.background="#383838";
 		document.getElementById("wdbLog").style.background="#383838";
 		document.getElementById("window").style.color="white";
+		document.getElementsByClassName("CodeMirror")[0].style.background = "#383838"
+		document.getElementsByClassName("CodeMirror")[0].style.color = "white"
 	} else {
 		bgChart = "#f0eded"
 		drawChart();
@@ -1244,7 +1253,10 @@ function themeChange(control) {
 		document.getElementById("window").style.background="#f0eded";
 		document.getElementById("wdbLog").style.background="#f0eded";
 		document.getElementById("window").style.color="black";
-	}	
+		document.getElementsByClassName("CodeMirror")[0].style.background = "white"
+		document.getElementsByClassName("CodeMirror")[0].style.color = "black"
+		
+	}
 }
 
 function resetstats(){
