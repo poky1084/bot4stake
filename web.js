@@ -1368,7 +1368,8 @@ function resetstats(){
 	bets = betcount;
 	document.getElementById("wdbPercentProfit").innerHTML = (profit_total / started_bal * 100).toFixed(2);
 	document.getElementById("wdbPercentWagered").innerHTML = (wagered / started_bal).toFixed(2);
-	
+	document.getElementById("result").innerHTML = "";
+	document.getElementById("result").style.color = "black";
 	
 	resetChart();
 	
