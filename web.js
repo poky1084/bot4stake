@@ -776,9 +776,9 @@ function startScoket(){
 								amount = nextbet;
 								target_multi = 99 / chance;
 							}, "5000");
+					
 					}
-					
-					
+			
 					
 			
 					
@@ -931,9 +931,10 @@ function startScoket(){
 								amount = nextbet;
 								target_multi = 99 / chance;
 								*/
-							} 
+							}
+						
 							
-							if (obj.payload.data.slide.event.result == "busted")
+							if (obj.payload.data.slide.event.result == "busted"){
 								betlist = []
 								color = "#f72a42"
 								losses++;
