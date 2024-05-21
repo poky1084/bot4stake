@@ -15,7 +15,7 @@ Please favourite the repo in case you liked/used it. Thank you!
 
 # Use: <br />
 
-<b>functions:</b> `resetseed(clientseed), resetstats(), vault(amount), log(text), start(), stop(), resetChart(), deleteLogs()`
+<b>functions:</b> `resetseed('clientseed'), resetstats(), vault(amount), log('text'), start(), stop(), resetChart(), deleteLogs()`
 
 !!the strategy must be in `dobet()` method, and `dobet()` must be declared as shown below!!
 ```javascript
