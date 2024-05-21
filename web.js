@@ -121,7 +121,9 @@ if (localStorage.getItem("themebot") != null) {
 		document.getElementById("wdbLog").style.background="#383838";
 		document.getElementById("window").style.color="white";
 		document.getElementsByClassName("CodeMirror")[0].style.background = "#383838"
-		document.getElementsByClassName("CodeMirror")[0].style.color = "white"
+		document.getElementsByClassName("CodeMirror")[0].style.color = "white"				
+		document.getElementById("result").style.color = "white";
+						
 	} else {
 		bgChart = "#f0eded"
 		drawChart();
@@ -131,6 +133,7 @@ if (localStorage.getItem("themebot") != null) {
 		document.getElementById("window").style.color="black";
 		document.getElementsByClassName("CodeMirror")[0].style.background = "white"
 		document.getElementsByClassName("CodeMirror")[0].style.color = "black"
+		document.getElementById("result").style.color = "black";
 		
 	}
 }
@@ -239,11 +242,6 @@ function startScoket(){
 					previousbet = amount;
 					
 					if(obj.payload.data.crash.event.status == "in_progress"){
-						if(theme == "dark"){
-							document.getElementById("result").style.color = "white";
-						} else {
-							document.getElementById("result").style.color = "black";
-						}
 						document.getElementById("result").innerHTML = obj.payload.data.crash.event.multiplier.toFixed(2) + 'x'
 					}
 					
@@ -1341,7 +1339,9 @@ function themeChange(control) {
 		document.getElementById("wdbLog").style.background="#383838";
 		document.getElementById("window").style.color="white";
 		document.getElementsByClassName("CodeMirror")[0].style.background = "#383838"
-		document.getElementsByClassName("CodeMirror")[0].style.color = "white"
+		document.getElementsByClassName("CodeMirror")[0].style.color = "white"				
+		document.getElementById("result").style.color = "white";
+						
 	} else {
 		bgChart = "#f0eded"
 		drawChart();
@@ -1351,6 +1351,7 @@ function themeChange(control) {
 		document.getElementById("window").style.color="black";
 		document.getElementsByClassName("CodeMirror")[0].style.background = "white"
 		document.getElementsByClassName("CodeMirror")[0].style.color = "black"
+		document.getElementById("result").style.color = "black";
 		
 	}
 }
