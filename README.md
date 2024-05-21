@@ -61,6 +61,7 @@ bethigh = false
  ```
 <b>Crash:</b>
 ```javascript
+game = "crash"
 target = 1.5
 chance = 99 / target
 nextbet = 0 
@@ -68,11 +69,21 @@ nextbet = 0
 <b>Slide:</b>
 > use: https://www.youtube.com/watch?v=nzvLC4HyG44 <br />
 ```javascript
+game = "slide"
 nextbet = 0.01
 target = 1.5
 chance = 99 / target
 
 dobet = function(){
+
+ if(id["identifier01"]){
+    log("identifier01 won.")
+ }
+
+ if(!id["identifier02"]){
+    log("identifier02 lost.")
+ }
+
  makebet(nextbet, chance, "identifier01")
  makebet(nextbet, chance, "identifier02")
  makebet(nextbet, chance, "identifier03")
