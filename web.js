@@ -331,11 +331,9 @@ function startScoket(){
 								
 							}
 							
-							/*dobet();
-						
+							dobet();
 							amount = nextbet;
 							target_multi = 99 / chance;
-							*/
 	
 						} 
 					if(obj.payload.data.crash.event.result == "autocashout")
@@ -487,23 +485,8 @@ function startScoket(){
 						lastBet.target = target_multi;
 
 						
-							dobet();
-							amount = nextbet;
-							target_multi = 99 / chance;
-						
-						
-						/*if(game == "crash"){
-							dobet();
-							amount = nextbet;
-							target_multi = 99 / chance;
-							crashbet(amount, target_multi);
-						} else if(game == "slide"){
-							dobet();
-						}*/
-						
 							
 						
-						//bet_has_been_made = false;
 						
 					}
 					if(obj.payload.data.crash.event.result == "busted"){
@@ -648,25 +631,7 @@ function startScoket(){
 						lastBet.amount = previousbet;
 						lastBet.target = target_multi;
 						
-						
-								dobet();
-								amount = nextbet;
-								target_multi = 99 / chance;
-						
-						
-						/*			
-						if(game == "crash"){
-							dobet();
-							amount = nextbet;
-							target_multi = 99 / chance;
-							crashbet(amount, target_multi);
-						} else if(game == "slide"){
-							dobet();
-						}*/
-						
-						
-						
-						
+				
 					}
 
 					
