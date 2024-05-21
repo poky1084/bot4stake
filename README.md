@@ -80,7 +80,7 @@ dobet = function(){
     log("identifier01 won.")
  }
 
- if(!id["identifier02"]){
+ if(id["identifier02"] == false){
     log("identifier02 lost.")
  }
 
