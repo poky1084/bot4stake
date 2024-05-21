@@ -470,8 +470,7 @@ function startScoket(){
 									amount = nextbet;
 									target_multi = 99 / chance;
 									crashbet(amount, target_multi);
-								}
-								if(game == "slide"){
+								} else if(game == "slide"){
 									dobet();
 								}
 								
@@ -628,8 +627,7 @@ function startScoket(){
 									amount = nextbet;
 									target_multi = 99 / chance;
 									crashbet(amount, target_multi);
-								}
-								if(game == "slide"){
+								} else if(game == "slide"){
 									dobet();
 								}
 							
@@ -1100,8 +1098,7 @@ function startScoket(){
 		
 								if(game == "crash"){
 									crashbet(amount, target_multi);
-								}
-								if(game == "slide"){
+								} else if(game == "slide"){
 									dobet();
 								}
 								
@@ -1169,7 +1166,7 @@ function dataslide(json, betidentifier){
 		log("Slide bet placed. ID:" + betidentifier)
 		if(json.data.multiplayerCrashBet.hasOwnProperty("slideResult")){
 			if(json.data.multiplayerCrashBet.slideResult == "pending"){
-				bet_has_been_made = true;				
+					bet_has_been_made = true;			
 			}
 		}
 	}
@@ -1178,10 +1175,11 @@ function dataslide(json, betidentifier){
 
 function datacrash(json){
 	if(json.data.hasOwnProperty("multiplayerCrashBet")){
-		log("crash bet placed.")
+		log("Crash bet placed.")
 		if(json.data.multiplayerCrashBet.hasOwnProperty("result")){
 			if(json.data.multiplayerCrashBet.result == "pending"){
 				bet_has_been_made = true;
+				
 			}
 		}
 	}
