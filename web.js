@@ -331,9 +331,7 @@ function startScoket(){
 								
 							}
 							
-							dobet();
-							amount = nextbet;
-							target_multi = 99 / chance;
+							
 	
 						} 
 					if(obj.payload.data.crash.event.result == "autocashout")
@@ -484,7 +482,9 @@ function startScoket(){
 						lastBet.amount = previousbet;
 						lastBet.target = target_multi;
 
-						
+						dobet();
+						amount = nextbet;
+						target_multi = 99 / chance;
 							
 						
 						
@@ -631,6 +631,9 @@ function startScoket(){
 						lastBet.amount = previousbet;
 						lastBet.target = target_multi;
 						
+						dobet();
+						amount = nextbet;
+						target_multi = 99 / chance;
 				
 					}
 
@@ -692,7 +695,7 @@ function startScoket(){
 							slide_bet_placed = false
 							crash_bet_placed = false
 							make_slide_bet = false;
-							
+							betlist = []
 							previousbet = amount;
 							if(theme == "dark"){
 								document.getElementById("result").style.color = "white";
@@ -784,6 +787,7 @@ function startScoket(){
 						if(obj.payload.data.slide.event.__typename == "MultiplayerSlideBet"){
 						
 							if(obj.payload.data.slide.event.result == "autocashout"){
+								betlist = []
 								color = "#05f711";
 								bet_found = true;
 								win = true;
@@ -929,7 +933,8 @@ function startScoket(){
 								*/
 							} 
 							
-							if (obj.payload.data.slide.event.result == "busted"){
+							if (obj.payload.data.slide.event.result == "busted")
+								betlist = []
 								color = "#f72a42"
 								losses++;
 								losestreak++
