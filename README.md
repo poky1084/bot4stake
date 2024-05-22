@@ -67,7 +67,7 @@ chance = 99 / target
 nextbet = 0 
 ```
 <b>Slide:</b>
-> use: [https://www.youtube.com/watch?v=nzvLC4HyG44](https://www.youtube.com/watch?v=TkDPeuxEOUM) <br />
+> use: https://www.youtube.com/watch?v=TkDPeuxEOUM <br />
 ```javascript
 game = "slide"
 nextbet = 0.01
