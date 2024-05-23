@@ -137,7 +137,7 @@ addJs('https://canvasjs.com/assets/script/canvasjs.min.js', () => {  })
 var editor = ''
 addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/darcula.min.css', () => {})
 addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css', () => {})
-addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', () => {})
+//addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', () => {})
 
 let theme = "light"
 
@@ -259,7 +259,7 @@ function onMouseDrag({ movementX, movementY }) {
 }
 
 mydiv.addEventListener("mousedown", () => {
-	draggin = false
+	draggin = true
     mydiv.addEventListener("mousemove", onMouseDrag);
 });
 mydiv.addEventListener("mouseup", () => {
