@@ -163,10 +163,10 @@ userBalances();
 startScoket();
 }, "3000");
 
-
-var draggin = false
 // drag and drop bot
+var draggin = false
 var mydiv = document.getElementById("window");
+//var myeditor = document.getElementById('editor')
 
 function onMouseDrag({ movementX, movementY }) {
     let getContainerStyle = window.getComputedStyle(mydiv);
@@ -191,6 +191,18 @@ mydiv.addEventListener("mouseup", () => {
 document.body.addEventListener("mouseup", () => {
 	draggin = false
 });
+/*
+myeditor.addEventListener("mouseup", () => {
+	draggin = false
+	mydiv.removeEventListener("mousemove", onMouseDrag);
+});
+myeditor.addEventListener("mousedown", () => {
+	draggin = false
+	mydiv.removeEventListener("mousemove", onMouseDrag);
+});
+*/
+
+
 
 let currency = "btc"
 var tokenapi = "";
@@ -267,8 +279,8 @@ let risk = "low"
 let numbers = [1,2,3,4,5,6,7,8,9]
 let rows = 8
 let segments = 10
-let chips = {"amount":0.0001, "value":"number0"}
-
+let chips = [{"value":"colorBlack", "amount":0.0001}]
+let multiplier_start = 1
 //let websocket = ""
 
 function startScoket(){
@@ -296,6 +308,8 @@ function startScoket(){
 					previousbet = amount;
 					
 					if(obj.payload.data.crash.event.status == "in_progress"){
+						
+						multiplier_start = obj.payload.data.crash.event.multiplier
 						document.getElementById("result").innerHTML = obj.payload.data.crash.event.multiplier.toFixed(2) + 'x'
 					} 
 					if(obj.payload.data.crash.event.status == "crash"){
@@ -1892,11 +1906,40 @@ function wheelbet(amount, wheelsegments, wheelrisk){
 }
 
 function roulettebet(selection){
+	
+	let roulette_row = []
+	let roulette_parity = []
+	let roulette_range = []
+	let roulette_color = []
+	let roulette_number = []
+	
+	selection.forEach(function(obj){
+		if(obj.value.indexOf("row") >= 0){
+			roulette_row.push(obj)
+		}
+		if(obj.value.indexOf("parity") >= 0){
+			roulette_parity.push(obj)
+		}
+		if(obj.value.indexOf("range") >= 0){
+			roulette_range.push(obj)
+		}
+		if(obj.value.indexOf("color") >= 0){
+			roulette_color.push(obj)
+		}
+		if(obj.value.indexOf("number") >= 0){
+			roulette_number.push(obj)
+		}
+	});
+	
 	var body = {
 		variables:{
         "currency": document.getElementById('wdbMenuCoin').value,
         "identifier": randomString(21),
-        "numbers": selection
+        "numbers": roulette_number,
+		"colors": roulette_color,
+		"ranges": roulette_range,
+		"rows": roulette_row,
+		"parities": roulette_parity
 		},
 		query:"mutation RouletteBet($currency: CurrencyEnum!, $colors: [RouletteBetColorsInput!], $numbers: [RouletteBetNumbersInput!], $parities: [RouletteBetParitiesInput!], $ranges: [RouletteBetRangesInput!], $rows: [RouletteBetRowsInput!], $identifier: String!) {\n  rouletteBet(\n    currency: $currency\n    colors: $colors\n    numbers: $numbers\n    parities: $parities\n    ranges: $ranges\n    rows: $rows\n    identifier: $identifier\n  ) {\n    ...CasinoBet\n    state {\n      ...RouletteStateFragment\n    }\n  }\n}\n\nfragment CasinoBet on CasinoBet {\n  id\n  active\n  payoutMultiplier\n  amountMultiplier\n  amount\n  payout\n  updatedAt\n  currency\n  game\n  user {\n    id\n    name\n  }\n}\n\nfragment RouletteStateFragment on CasinoGameRoulette {\n  result\n  colors {\n    amount\n    value\n  }\n  numbers {\n    amount\n    value\n  }\n  parities {\n    amount\n    value\n  }\n  ranges {\n    amount\n    value\n  }\n  rows {\n    amount\n    value\n  }\n}\n"		}
 		
