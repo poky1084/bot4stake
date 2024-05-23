@@ -69,7 +69,7 @@ segments = "10"
 <b>Roulette:</b>
 ```javascript
 game = "roulette"
-chips = {"amount":0.0001,"value":"number21"}
+chips = [{"value": "number0", "amount": 0.001},{"value": "colorBlack", "amount": 0.001}]
  ```
 <b>Crash:</b>
 ```javascript
