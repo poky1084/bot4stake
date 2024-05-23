@@ -2202,7 +2202,7 @@ function data(json){
 
 			tdTargetNumber.innerHTML = json.data.plinkoBet.state.risk + "|" + json.data.plinkoBet.state.rows
 
-			tdRollNumber.innerHTML = multiplierOut.toFixed(2) + "x"
+			tdRollNumber.innerHTML = multiplierOut.toFixed(2)
 			tdNonce.innerHTML = json.data.plinkoBet.game;
 			tdBetID.innerHTML = json.data.plinkoBet.id;
 			tdPayout.innerHTML = json.data.plinkoBet.payout.toFixed(8);
