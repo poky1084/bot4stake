@@ -59,6 +59,13 @@ chance = 49.5
 nextbet = 0
 bethigh = false
  ```
+<b>Wheel:</b>
+```javascript
+game = "wheel"
+nextbet = 0
+risk = "low"
+segments = "10"
+ ```
 <b>Crash:</b>
 ```javascript
 game = "crash"
