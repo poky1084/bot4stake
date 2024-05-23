@@ -66,6 +66,11 @@ nextbet = 0
 risk = "low"
 segments = "10"
  ```
+<b>Roulette:</b>
+```javascript
+game = "roulette"
+chips = {"amount":0.0001,"value":"number21"}
+ ```
 <b>Crash:</b>
 ```javascript
 game = "crash"
