@@ -259,7 +259,7 @@ function onMouseDrag({ movementX, movementY }) {
 }
 
 mydiv.addEventListener("mousedown", () => {
-	draggin = true
+	draggin = false
     mydiv.addEventListener("mousemove", onMouseDrag);
 });
 mydiv.addEventListener("mouseup", () => {
