@@ -1,4 +1,4 @@
- document.body.insertAdjacentHTML("afterend", '<style> #window{      display:block;      height:570px;      color: black;      width: 1070px;      min-width: 500px;      background: #f0eded;      border-radius: 5px;      -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.75);      -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.75);     /*-webkit-transition:all 0.5s;      */      overflow: hidden;      font-family: "Geneva", sans-serif;      position: absolute;      z-index: 15;      left: 50%;      top: 50%;      transform: translate(-50%, -50%);      -ms-transform: translate(-50%, -50%);     /* for IE 9 */      -webkit-transform: translate(-50%, -50%);     /* for Safari */ } /* TOP BAR */  #topbar{      width: 100%;      height: 21px;      font-size: 16px;      font-family: "Myriad Pro", sans-serif;      text-shadow:0px 1px 0px rgba(255,255,255,0.25);      -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.5);      -moz-box-shadow:0 1px 0 rgba(0,0,0,0.5); }  #topbar ul li {      float: left;      padding:0 10px;      height: 21px;      line-height: 24px; }  #topbar ul li:first-child{      font-size: 20px;      line-height: 26px;      margin-left: 5px; }  #topbar ul li:nth-child(2){      font-family: "Myriad-Semi", sans-serif; }  #topbar ul li:active{      background-image: -webkit-gradient(linear,left bottom,left top,color-stop(1, #4a82ff),color-stop(0, #0052fc));      color: #fff;      text-shadow: none; }  #toolbar{      width: 100%;      height: 25px;      background: grey;      border-radius:5px 5px 0 0;      background: #cfcfcf;     /* Old browsers */      background: -moz-linear-gradient(top, #cfcfcf 0%, #a8a8a8 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cfcfcf), color-stop(100%,#a8a8a8));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #cfcfcf 0%,#a8a8a8 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #cfcfcf 0%,#a8a8a8 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #cfcfcf 0%,#a8a8a8 100%);     /* IE10+ */      background: linear-gradient(top, #cfcfcf 0%,#a8a8a8 100%);     /* W3C */      -webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151;      -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151;      box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151; }  #toolbar .top{      float: left;      width: 100%;      height: 23px; }  #toolbar .bottom{      float: left;      width: 100%;      height: 30px; } /*-----TRAFFIC LIGHTS-----*/  #toolbar #lights{      float: left;      position:relative;      top:4px;      left:7px; }  .light{      float:left;      width:14px;      height:14px;      border-radius:14px;      -webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5),0px 0px 3px #000 inset;      -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5),0px 0px 3px #000 inset;      box-shadow:0px 1px 0px rgba(255,255,255,0.5),0px 0px 3px #000 inset;      overflow: hidden; }  #lights:hover .glyph{      opacity: 1;      cursor:default; }  .light .shine{      width: 4px;      height:3px;      border-radius:10px;     /*background-image: -webkit-gradient(radial, center center, 0, center center, 3, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));     */      background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);     /* FF3.6+ */      background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));     /* Chrome,Safari4+ */      background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);     /* Chrome10+,Safari5.1+ */      background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);     /* Opera 12+ */      background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);     /* IE10+ */      background: radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);     /* W3C */ }  .light .glow{      width:14px;      height:8px;      background-image: -webkit-gradient(radial, center bottom, 0, center center, 5, from(rgba(255,255,255,0.75)), to(rgba(255,255,255,0)));      background: 0px 0px -moz-radial-gradient(bottom, cover, rgba(255,255,255,0.70) 0%, rgba(255,255,255,0) 80%);     /* FF3.6+ */ } /*--RED--*/  .red{      background: #f41b16;     /* Old browsers */      background: -moz-linear-gradient(top, #f41b16 0%, #fc7471 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f41b16), color-stop(100%,#fc7471));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #f41b16 0%,#fc7471 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #f41b16 0%,#fc7471 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #f41b16 0%,#fc7471 100%);     /* IE10+ */      background: linear-gradient(top, #f41b16 0%,#fc7471 100%);     /* W3C */ }  .red:active{      background: #972f2e;     /* Old browsers */      background: -moz-linear-gradient(top, #972f2e 0%, #fc7471 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#972f2e), color-stop(100%,#fc7471));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #972f2e 0%,#fc7471 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #972f2e 0%,#fc7471 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #972f2e 0%,#fc7471 100%);     /* IE10+ */      background: linear-gradient(top, #972f2e 0%,#fc7471 100%);     /* W3C */ }  .red .shine{      position: relative;      top: -23px;      left: 5px; }  .red .glow{      position: relative;      top: -22px; }  .red .glyph{      position: relative;      top: -6px;      left: 3px;      font-size: 14px;      font-weight: bold;      color: #9b3a36;      z-index: 50;      opacity: 0; } /*--YELLOW--*/  .yellow{      background: #f4a316;     /* Old browsers */      background: -moz-linear-gradient(left, #f4a316 0%, #fcc371 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f4a316), color-stop(100%,#fcc371));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(left, #f4a316 0%,#fcc371 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(left, #f4a316 0%,#fcc371 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(left, #f4a316 0%,#fcc371 100%);     /* IE10+ */      background: linear-gradient(left, #f4a316 0%,#fcc371 100%);     /* W3C */      margin:0px 7px; }  .yellow:active{      background: #ae4f1e;     /* Old browsers */      background: -moz-linear-gradient(top, #ae4f1e 0%, #fcc371 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ae4f1e), color-stop(100%,#fcc371));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #ae4f1e 0%,#fcc371 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #ae4f1e 0%,#fcc371 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #ae4f1e 0%,#fcc371 100%);     /* IE10+ */      background: linear-gradient(top, #ae4f1e 0%,#fcc371 100%);     /* W3C */ }  .yellow .shine{      position: relative;      top: -23px;      left: 5px; }  .yellow .glow{      position: relative;      top: -22px; }  .yellow .glyph{      position: relative;      top: -7px;      left: 4px;      font-size: 24px;      color: #854322;      z-index: 50;      opacity: 0;      -webkit-transform: scaleY(1.5) scaleX(1.3); } /*--GREEN--*/  .green{      background: #4cae2e;     /* Old browsers */      background: -moz-linear-gradient(top, #4cae2e 0%, #dafc71 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4cae2e), color-stop(100%,#dafc71));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #4cae2e 0%,#dafc71 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #4cae2e 0%,#dafc71 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #4cae2e 0%,#dafc71 100%);     /* IE10+ */      background: linear-gradient(top, #4cae2e 0%,#dafc71 100%);     /* W3C */ }  .green:active{      background: #48752b;     /* Old browsers */      background: -moz-linear-gradient(top, #48752b 0%, #dafc71 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#48752b), color-stop(100%,#dafc71));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #48752b 0%,#dafc71 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #48752b 0%,#dafc71 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #48752b 0%,#dafc71 100%);     /* IE10+ */      background: linear-gradient(top, #48752b 0%,#dafc71 100%);     /* W3C */ }  .green .shine{      position: relative;      top: -22px;      left: 5px; }  .green .glow{      position: relative;      top: -22px; }  .green .glyph{      position: relative;      top: -6px;      left: 3px;      font-size: 14px;      font-weight: bold;      color: #25571d;      z-index: 50;      opacity: 0; } /* Horrible to do this for firefox */  @-moz-document url-prefix() {      .red .glyph {          position: relative;          top: -4px;     }      .yellow .glyph {          top: -4px;          left: 3px;     }      .green .glyph{          position: relative;          top: -4px;     } } /*-----TITLE-----*/  #title{      position: relative;      top:4px;      width:40%; 	 text-align: center;      font-family: "Myriad Pro", sans-serif;      font-size: 14px;      text-shadow: 0px 1px 0px rgba(255,255,255,0.5);      line-height: 14px; }  .folder{      float: left;      margin-right:5px; }  .folder .tab{      width:4px;      height:2px;      background:#a4c5da;      border:1px solid #728ea3;      border-bottom: none;      border-radius:2px 2px 0px 0px;      -webkit-box-shadow:0px -1px 0px #99b5c7 inset;      margin-left: 1px;      z-index: 5000;      margin-bottom: -1px; }  .folder .body{      width: 14px;      height: 10px;      border:1px solid #6e8ba1;      background: #b8cfe0;     /* Old browsers */      background: -moz-linear-gradient(top, #b8cfe0 0%, #86adc8 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b8cfe0), color-stop(100%,#86adc8));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #b8cfe0 0%,#86adc8 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #b8cfe0 0%,#86adc8 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #b8cfe0 0%,#86adc8 100%);     /* IE10+ */      background: linear-gradient(top, #b8cfe0 0%,#86adc8 100%);     /* W3C */      z-index: -50;      -webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.25) inset,0px 1px 0px rgba(0,0,0,0.2);      -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.25) inset,0px 1px 0px rgba(0,0,0,0.2); }  #nav{      margin: 1px 8px;      float: left; }  #view{      margin: 2px 0 0 110px;      display: inline-block; }  .control_box{      height:20px;      border-radius: 3px;      border: 1px solid #555;      background-image: -webkit-gradient(linear,left bottom,left top,color-stop(1, #fefefe),color-stop(0, #b8b8b8));      box-shadow:0px 1px 0px rgba(255,255,255,0.25); }  .control_box .control{      height:20px;      border-right: 1px solid #2e2e2e;      float: left;      text-align: center;      width: 27px; }  .control:last-child{      border-right: 0px solid !important; }  .control:active{      background: #b0afb0;      -webkit-box-shadow:0px 0px 4px #000 inset; }  .active{      background: #707070 !important;      -webkit-box-shadow:0px 3px 4px rgba(0,0,0,0.6) inset !important; }  #body {      font-family: Andale Mono, monospace;      line-height: 1em;      font-size:13px;      float: left;      width: 100%;      min-height:130px;      background:#f0eded;      padding:10px;      line-height:1.5em;      height: 40%; }  #body p {      color: #000; }  @keyframes blink {      0% {          background:rgba(99,222,0,100);     }      100% {          background:rgba(99,222,0,0);     } }  @-webkit-keyframes blink {      0% {          background:rgba(99,222,0,100);     }      100% {          background:rgba(99,222,0,0);     } }  @-moz-keyframes blink {      0% {          background:rgba(99,222,0,100);     }      100% {          background:rgba(99,222,0,0);     } }  .cursor {      background:#63de00;      display:inline-block;      width:11px;      height:19px;      margin-bottom:-3px; }  .cursor {      -webkit-animation-name: blink;      -webkit-animation-duration: 1.5s;      -webkit-animation-iteration-count: infinite;      -moz-animation-name: blink;      -moz-animation-duration: 1.5s;      -moz-animation-iteration-count: infinite; }  #body p::-webkit-selection {      background:#0b209e; }  #body p::selection {      background:#0b209e; }  #body p::-moz-selection {      background:#0b209e; }  #body p {      margin-top:5px;      margin-bottom:5px;      font-size:13px; }  #content{      float: left;      margin-top: 1px; }  #foot{      height: 23px;      width: 100%;      float: left;      background-image: -webkit-gradient(linear,left bottom,left top,color-stop(1, #cbcbcb),color-stop(0, #fff));      border-top:1px solid #515151;      border-radius:0 0 5px 5px; }  #foot .handle{      width: 11px;      height: 11px;      float: right;      margin: 6px;      overflow: hidden; }  .handle .grip{      -webkit-transform: rotate(45deg) scaley(3);      margin: 2px 0 0 2px;      color: #fff;      text-shadow: 1px 1px 0 #c6c6c6;      font-size: 14px; }  .icon{      width: 86px;      height: 100px;      margin: 20px;      float: left;      font-family: "Myriad Pro", sans-serif;      text-align: center;      font-size: 12px; }  .icon .frame{      width: 82px;      height: 82px;      border-radius: 5px;      border: 2px solid transparent; }  .icon .name{      color: #000;      padding-top: 3px;      border-radius:15px;      width: 55px;      margin: 5px 0 0 15px; }  .icon .folder{      margin:15px 0 0 6px; }  .tbl{      width: 100% }  td {      vertical-align: top;      width:50%; }  .wdb-stats, .wdb-flex-container {      display: flex;      align-items: stretch; }  .wdb-stats div {      flex-grow: 1;      padding: 2px 32px; }  .wdb-stats div li {      list-style: none; }  .clearfix::after {      content: "";      clear: both;      display: table; }  .float-left {      float: left!important; }  .float-right {      float: right!important; }  .wraph{      width: 100%;      height: 100%;      margin: 0;      padding: 0;      overflow: auto;      overflow-x: auto; }  #wdbWrapHistory {      height: 200px;      padding: 3px; }  #wdbWrapHistory {      overflow-x: auto; }  #wdbWrapHistory table {      border-collapse: collapse;      font-size: 11px!important; }  #wdbWrapHistory table thead tr th {      text-align: left;      padding: 1px;      border: 1px solid #fff; }  #wdbHistory tr {      border-bottom: 1px solid #fff;      color: #000!important; }  #wdbHistory tr:last-child {      border-bottom: 1px solid #ccc; }  #wdbHistory tr td {      all: revert;      white-space: nowrap;      padding: 1.5px;      border-right: 1px solid #fff;      border-left: 1px solid #fff; }  #wdbHistory tr td:first-child {      border-left: 1px solid #ccc; }  #wdbHistory tr td:last-child {      border-right: 1px solid #ccc; }  #wdbHistory tr td input {      all: revert; }  .btn-grad {      all: revert;      cursor: pointer;      background-image: linear-gradient(to right, #00E701 0%, #00E701 51%, #00E701 100%);      text-align: center;      transition: 0.5s;      padding: 3px;      background-size: 200% auto;      border: #ffc107;      border-radius: 3px; }  .btn-grad:hover {      background-position: right center;      text-decoration: none; }  .btn-grad:active {      opacity: .65; }  .btn-grad:disabled {      cursor: auto;      opacity: .65;      color: #fff; }  .btn-control {      padding-top: 10px!important;      padding-bottom: 10px!important; }  #wdbMenu {      padding: 3px; }  #wdbMenu select, #wdbMenu span input[type=number] {      all: revert;      background: #fff!important;      padding: 3px 5px;      border: 1px solid #ccc;      border-radius: 0; }  #window{      color: black; }  #wdbLog {      overflow-x: auto;      overflow-y: auto;      font-size: 11px;      background: #f0eded; }  #result {      position: relative;      padding-top: 2px;      padding-left: 20px;      padding-bottom: 10px;      height: 40px;      text-align: center;      vertical-align: middle;      font-size: 30px;      font-weight: bold;      font-family: "Geneva", sans-serif; }  html {      font-family: "Geneva", sans-serif; }  .switch {      position: relative;      display: inline-block;      width: 40px;      height: 19px; }  .switch input {      opacity: 0;      width: 0;      height: 0; }  .slider {      position: absolute;      cursor: pointer;      top: 0;      left: 0;      right: 0;      bottom: 0;      background-color: #ccc;      -webkit-transition: .4s;      transition: .4s; }  .slider:before {      position: absolute;      content: "";      height: 19px;      width: 19px;      left: 0px;      bottom: 0px;      background-color: black;      -webkit-transition: .4s;      transition: .4s; }  input:checked + .slider {      background-image: linear-gradient(to right, #00E701 0%, #00E701 51%, #00E701 100%); }  input:focus + .slider {      box-shadow: 0 0 1px #2196F3; }  input:checked + .slider:before {      -webkit-transform: translateX(24px);      -ms-transform: translateX(24px);      transform: translateX(24px); } /* Rounded sliders */  .slider.round {      border-radius: 34px; }  .slider.round:before {      border-radius: 50%; }  .fastmode{      float: right; } </style> <div id="window">     <div id="toolbar">         <div class="top">             <div id="lights">                 <div class="light red">                     <div class="glyph">×</div>                     <div class="shine"></div>                     <div class="glow"></div>                 </div>                 <div class="light yellow">                     <div class="glyph">-</div>                     <div class="shine"></div>                     <div class="glow"></div>                 </div>                 <div class="light green">                     <div class="glyph">+</div>                     <div class="shine"></div>                     <div class="glow"></div>                 </div>             </div>             <center><div id="title"> github.com/poky1084 </div></center>             <div id="bubble">                 <div class="shine"></div>                 <div class="glow"></div>             </div>         </div>     </div>     <div id="body">         <table class="tbl">             <tr>                 <td>                     <div class="wdb-stats" id="wdbStats">                         <div>                             <li class="clearfix"> <span class="float-left">Balance:</span> <span class="float-right"><span id="wdbBalance">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-left">Wagered:</span> <span class="float-right">(<span id="wdbPercentWagered">0.00</span>x) <span id="wdbWagered">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-left">Profit:</span> <span class="float-right" id="wdbWrapPercentProfit">(<span id="wdbPercentProfit">0.00</span>%) <span id="wdbProfit">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-left">W/L/T:</span> </li>                             <li class="clearfix"> <span class="float-left">H/L/Current:</span> </li>                             <li class="clearfix"> <span class="float-left">Time:</span> </li>                         </div>                         <div>                             <li class="clearfix"> <span class="float-left">MaxBet:</span> <span class="float-right"><span id="wdbHighBet">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-left">MaxLose:</span> <span class="float-right"><span id="wdbHighLose">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-left">MaxProfit:</span> <span class="float-right"><span id="wdbHighProfit">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-right"><span id="wdbBets"><span style="">0</span> / <span style="">0</span> / 0</span>                                 </span>                             </li>                             <li class="clearfix"> <span class="float-right"><span id="wdbHighLowStreak"><span style="">0</span> / <span style="">0</span> / <span id="currentstrk">0</span></span>                                 </span>                             </li>                             <li class="clearfix"> <span class="float-right"><span id="wdbTime">0:0:0:0</span></span>                             </li>                         </div>                     </div>                 </td>                 <td>                     <div class="half" id="chartContainer" style="height: 150px; width: 540px;"></div>                 </td>             </tr>             <tr>                 <td>                     <div style="flex-grow: 1;width: 520px;">                         <div id="result"> </div>                         <div class="wraph" id="wdbWrapHistory">                             <table>                                 <thead>                                     <tr>                                         <th>Bets</th>                                         <th>Game</th>                                         <th>Amount</th>                                         <th>High</th>                                         <th>Multiplier</th>                                         <th>Profit</th>                                         <th>Payout</th>                                         <th>Target</th>                                         <th>Roll</th>                                         <th>Settings</th>                                         <th>BetID</th>                                     </tr>                                 </thead>                                 <tbody id="wdbHistory"></tbody>                             </table>                         </div>                     </div>                     <div id="wdbWrapLog">                         <table id="wdbLog" class="wraph" style="width: 100%; height: 170px;">                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                         </table>                     </div>                 </td>                 <td>                     <div id="wdbMenu">                         <div style="padding: 5px 2px 5px">                             <button class="btn-grad" id="wdbSaveScriptButton">Save</button>                             <div class="fastmode"> Fast Mode:                                 <label class="switch">                                     <input id="speedChange" type="checkbox"> <span class="slider round"></span> </label>                             </div>                         </div>                     </div>                     <textarea id="editor"></textarea>                     <div id="wdbControlMenu">                         <div id="wdbMenu">                             <button id="wdbStartButton" class="btn-grad btn-control" style="width: 100px;">Start</button>                             <button id="wdbStopButton" class="btn-grad btn-control" style="width: 100px;">Stop</button>                             <select id="wdbMenuCoin" class="wdb-select">                                 <option value="btc">btc</option>                             </select>                             <select id="gameselect" class="gameselect">                                 <option value="dice" selected="selected">dice</option>                                 <option value="limbo">limbo</option>                                 <option value="mines">mines</option>                                 <option value="keno">keno</option>                                 <option value="plinko">plinko</option>                                 <option value="wheel">wheel</option>                                 <option value="roulette">roulette</option>                                 <option value="crash">crash</option>                                 <option value="slide">slide</option>                             </select>                             <select id="themebot" class="themebot">                                 <option value="light" selected="selected">light</option>                                 <option value="dark">dark</option>                                 <option value="blue">blue</option>                                 <option value="black">black</option>                             </select>                             <button id="resetall" class="btn-grad">ResetAll</button>                         </div>                     </div>                 </td>             </tr>         </table>         <p> </p>         <div class="cursor"></div>     </div> </div>')
+ document.body.insertAdjacentHTML("afterend", '<style> #window{      display:block;      height:570px;      color: black;      width: 1070px;      min-width: 500px;      background: #f0eded;      border-radius: 5px;      -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.75);      -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.75);     /*-webkit-transition:all 0.5s;      */      overflow: hidden;      font-family: "Geneva", sans-serif;      position: absolute;      z-index: 15;      left: 50%;      top: 50%;      transform: translate(-50%, -50%);      -ms-transform: translate(-50%, -50%);     /* for IE 9 */      -webkit-transform: translate(-50%, -50%);     /* for Safari */ } /* TOP BAR */  #topbar{      width: 100%;      height: 21px;      font-size: 16px;      font-family: "Myriad Pro", sans-serif;      text-shadow:0px 1px 0px rgba(255,255,255,0.25);      -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.5);      -moz-box-shadow:0 1px 0 rgba(0,0,0,0.5); }  #topbar ul li {      float: left;      padding:0 10px;      height: 21px;      line-height: 24px; }  #topbar ul li:first-child{      font-size: 20px;      line-height: 26px;      margin-left: 5px; }  #topbar ul li:nth-child(2){      font-family: "Myriad-Semi", sans-serif; }  #topbar ul li:active{      background-image: -webkit-gradient(linear,left bottom,left top,color-stop(1, #4a82ff),color-stop(0, #0052fc));      color: #fff;      text-shadow: none; }  #toolbar{      width: 100%;      height: 25px;      background: grey;      border-radius:5px 5px 0 0;      background: #cfcfcf;     /* Old browsers */      background: -moz-linear-gradient(top, #cfcfcf 0%, #a8a8a8 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cfcfcf), color-stop(100%,#a8a8a8));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #cfcfcf 0%,#a8a8a8 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #cfcfcf 0%,#a8a8a8 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #cfcfcf 0%,#a8a8a8 100%);     /* IE10+ */      background: linear-gradient(top, #cfcfcf 0%,#a8a8a8 100%);     /* W3C */      -webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151;      -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151;      box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151; }  #toolbar .top{      float: left;      width: 100%;      height: 23px; }  #toolbar .bottom{      float: left;      width: 100%;      height: 30px; } /*-----TRAFFIC LIGHTS-----*/  #toolbar #lights{      float: left;      position:relative;      top:4px;      left:7px; }  .light{      float:left;      width:14px;      height:14px;      border-radius:14px;      -webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5),0px 0px 3px #000 inset;      -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5),0px 0px 3px #000 inset;      box-shadow:0px 1px 0px rgba(255,255,255,0.5),0px 0px 3px #000 inset;      overflow: hidden; }  #lights:hover .glyph{      opacity: 1;      cursor:default; }  .light .shine{      width: 4px;      height:3px;      border-radius:10px;     /*background-image: -webkit-gradient(radial, center center, 0, center center, 3, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));      */      background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);     /* FF3.6+ */      background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));     /* Chrome,Safari4+ */      background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);     /* Chrome10+,Safari5.1+ */      background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);     /* Opera 12+ */      background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);     /* IE10+ */      background: radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);     /* W3C */ }  .light .glow{      width:14px;      height:8px;      background-image: -webkit-gradient(radial, center bottom, 0, center center, 5, from(rgba(255,255,255,0.75)), to(rgba(255,255,255,0)));      background: 0px 0px -moz-radial-gradient(bottom, cover, rgba(255,255,255,0.70) 0%, rgba(255,255,255,0) 80%);     /* FF3.6+ */ } /*--RED--*/  .red{      background: #f41b16;     /* Old browsers */      background: -moz-linear-gradient(top, #f41b16 0%, #fc7471 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f41b16), color-stop(100%,#fc7471));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #f41b16 0%,#fc7471 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #f41b16 0%,#fc7471 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #f41b16 0%,#fc7471 100%);     /* IE10+ */      background: linear-gradient(top, #f41b16 0%,#fc7471 100%);     /* W3C */ }  .red:active{      background: #972f2e;     /* Old browsers */      background: -moz-linear-gradient(top, #972f2e 0%, #fc7471 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#972f2e), color-stop(100%,#fc7471));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #972f2e 0%,#fc7471 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #972f2e 0%,#fc7471 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #972f2e 0%,#fc7471 100%);     /* IE10+ */      background: linear-gradient(top, #972f2e 0%,#fc7471 100%);     /* W3C */ }  .red .shine{      position: relative;      top: -23px;      left: 5px; }  .red .glow{      position: relative;      top: -22px; }  .red .glyph{      position: relative;      top: -6px;      left: 3px;      font-size: 14px;      font-weight: bold;      color: #9b3a36;      z-index: 50;      opacity: 0; } /*--YELLOW--*/  .yellow{      background: #f4a316;     /* Old browsers */      background: -moz-linear-gradient(left, #f4a316 0%, #fcc371 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f4a316), color-stop(100%,#fcc371));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(left, #f4a316 0%,#fcc371 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(left, #f4a316 0%,#fcc371 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(left, #f4a316 0%,#fcc371 100%);     /* IE10+ */      background: linear-gradient(left, #f4a316 0%,#fcc371 100%);     /* W3C */      margin:0px 7px; }  .yellow:active{      background: #ae4f1e;     /* Old browsers */      background: -moz-linear-gradient(top, #ae4f1e 0%, #fcc371 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ae4f1e), color-stop(100%,#fcc371));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #ae4f1e 0%,#fcc371 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #ae4f1e 0%,#fcc371 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #ae4f1e 0%,#fcc371 100%);     /* IE10+ */      background: linear-gradient(top, #ae4f1e 0%,#fcc371 100%);     /* W3C */ }  .yellow .shine{      position: relative;      top: -23px;      left: 5px; }  .yellow .glow{      position: relative;      top: -22px; }  .yellow .glyph{      position: relative;      top: -7px;      left: 4px;      font-size: 24px;      color: #854322;      z-index: 50;      opacity: 0;      -webkit-transform: scaleY(1.5) scaleX(1.3); } /*--GREEN--*/  .green{      background: #4cae2e;     /* Old browsers */      background: -moz-linear-gradient(top, #4cae2e 0%, #dafc71 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4cae2e), color-stop(100%,#dafc71));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #4cae2e 0%,#dafc71 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #4cae2e 0%,#dafc71 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #4cae2e 0%,#dafc71 100%);     /* IE10+ */      background: linear-gradient(top, #4cae2e 0%,#dafc71 100%);     /* W3C */ }  .green:active{      background: #48752b;     /* Old browsers */      background: -moz-linear-gradient(top, #48752b 0%, #dafc71 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#48752b), color-stop(100%,#dafc71));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #48752b 0%,#dafc71 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #48752b 0%,#dafc71 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #48752b 0%,#dafc71 100%);     /* IE10+ */      background: linear-gradient(top, #48752b 0%,#dafc71 100%);     /* W3C */ }  .green .shine{      position: relative;      top: -22px;      left: 5px; }  .green .glow{      position: relative;      top: -22px; }  .green .glyph{      position: relative;      top: -6px;      left: 3px;      font-size: 14px;      font-weight: bold;      color: #25571d;      z-index: 50;      opacity: 0; } /* Horrible to do this for firefox */  @-moz-document url-prefix() {      .red .glyph {          position: relative;          top: -4px;     }      .yellow .glyph {          top: -4px;          left: 3px;     }      .green .glyph{          position: relative;          top: -4px;     } } /*-----TITLE-----*/  #title{      position: relative;      top:4px;      width:40%;      text-align: center;      font-family: "Myriad Pro", sans-serif;      font-size: 14px;      text-shadow: 0px 1px 0px rgba(255,255,255,0.5);      line-height: 14px; }  .folder{      float: left;      margin-right:5px; }  .folder .tab{      width:4px;      height:2px;      background:#a4c5da;      border:1px solid #728ea3;      border-bottom: none;      border-radius:2px 2px 0px 0px;      -webkit-box-shadow:0px -1px 0px #99b5c7 inset;      margin-left: 1px;      z-index: 5000;      margin-bottom: -1px; }  .folder .body{      width: 14px;      height: 10px;      border:1px solid #6e8ba1;      background: #b8cfe0;     /* Old browsers */      background: -moz-linear-gradient(top, #b8cfe0 0%, #86adc8 100%);     /* FF3.6+ */      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b8cfe0), color-stop(100%,#86adc8));     /* Chrome,Safari4+ */      background: -webkit-linear-gradient(top, #b8cfe0 0%,#86adc8 100%);     /* Chrome10+,Safari5.1+ */      background: -o-linear-gradient(top, #b8cfe0 0%,#86adc8 100%);     /* Opera 11.10+ */      background: -ms-linear-gradient(top, #b8cfe0 0%,#86adc8 100%);     /* IE10+ */      background: linear-gradient(top, #b8cfe0 0%,#86adc8 100%);     /* W3C */      z-index: -50;      -webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.25) inset,0px 1px 0px rgba(0,0,0,0.2);      -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.25) inset,0px 1px 0px rgba(0,0,0,0.2); }  #nav{      margin: 1px 8px;      float: left; }  #view{      margin: 2px 0 0 110px;      display: inline-block; }  .control_box{      height:20px;      border-radius: 3px;      border: 1px solid #555;      background-image: -webkit-gradient(linear,left bottom,left top,color-stop(1, #fefefe),color-stop(0, #b8b8b8));      box-shadow:0px 1px 0px rgba(255,255,255,0.25); }  .control_box .control{      height:20px;      border-right: 1px solid #2e2e2e;      float: left;      text-align: center;      width: 27px; }  .control:last-child{      border-right: 0px solid !important; }  .control:active{      background: #b0afb0;      -webkit-box-shadow:0px 0px 4px #000 inset; }  .active{      background: #707070 !important;      -webkit-box-shadow:0px 3px 4px rgba(0,0,0,0.6) inset !important; }  #body {      font-family: Andale Mono, monospace;      line-height: 1em;      font-size:13px;      float: left;      width: 100%;      min-height:130px;      background:#f0eded;      padding:10px;      line-height:1.5em;      height: 40%; }  #body p {      color: #000; }  @keyframes blink {      0% {          background:rgba(99,222,0,100);     }      100% {          background:rgba(99,222,0,0);     } }  @-webkit-keyframes blink {      0% {          background:rgba(99,222,0,100);     }      100% {          background:rgba(99,222,0,0);     } }  @-moz-keyframes blink {      0% {          background:rgba(99,222,0,100);     }      100% {          background:rgba(99,222,0,0);     } }  .cursor {      background:#63de00;      display:inline-block;      width:11px;      height:19px;      margin-bottom:-3px; }  .cursor {      -webkit-animation-name: blink;      -webkit-animation-duration: 1.5s;      -webkit-animation-iteration-count: infinite;      -moz-animation-name: blink;      -moz-animation-duration: 1.5s;      -moz-animation-iteration-count: infinite; }  #body p::-webkit-selection {      background:#0b209e; }  #body p::selection {      background:#0b209e; }  #body p::-moz-selection {      background:#0b209e; }  #body p {      margin-top:5px;      margin-bottom:5px;      font-size:13px; }  #content{      float: left;      margin-top: 1px; }  #foot{      height: 23px;      width: 100%;      float: left;      background-image: -webkit-gradient(linear,left bottom,left top,color-stop(1, #cbcbcb),color-stop(0, #fff));      border-top:1px solid #515151;      border-radius:0 0 5px 5px; }  #foot .handle{      width: 11px;      height: 11px;      float: right;      margin: 6px;      overflow: hidden; }  .handle .grip{      -webkit-transform: rotate(45deg) scaley(3);      margin: 2px 0 0 2px;      color: #fff;      text-shadow: 1px 1px 0 #c6c6c6;      font-size: 14px; }  .icon{      width: 86px;      height: 100px;      margin: 20px;      float: left;      font-family: "Myriad Pro", sans-serif;      text-align: center;      font-size: 12px; }  .icon .frame{      width: 82px;      height: 82px;      border-radius: 5px;      border: 2px solid transparent; }  .icon .name{      color: #000;      padding-top: 3px;      border-radius:15px;      width: 55px;      margin: 5px 0 0 15px; }  .icon .folder{      margin:15px 0 0 6px; }  .tbl{      width: 100% }  td {      vertical-align: top;      width:50%; }  .wdb-stats, .wdb-flex-container {      display: flex;      align-items: stretch; }  .wdb-stats div {      flex-grow: 1;      padding: 2px 32px; }  .wdb-stats div li {      list-style: none; }  .clearfix::after {      content: "";      clear: both;      display: table; }  .float-left {      float: left!important; }  .float-right {      float: right!important; }  .wraph{      width: 100%;      height: 100%;      margin: 0;      padding: 0;      overflow: auto;      overflow-x: auto; }  #wdbWrapHistory {      height: 200px;      padding: 3px; }  #wdbWrapHistory {      overflow-x: auto; }  #wdbWrapHistory table {      border-collapse: collapse;      font-size: 11px!important; }  #wdbWrapHistory table thead tr th {      text-align: left;      padding: 1px;      border: 1px solid #fff; }  #wdbHistory tr {      border-bottom: 1px solid #fff;      color: #000!important; }  #wdbHistory tr:last-child {      border-bottom: 1px solid #ccc; }  #wdbHistory tr td {      all: revert;      white-space: nowrap;      padding: 1.5px;      border-right: 1px solid #fff;      border-left: 1px solid #fff; }  #wdbHistory tr td:first-child {      border-left: 1px solid #ccc; }  #wdbHistory tr td:last-child {      border-right: 1px solid #ccc; }  #wdbHistory tr td input {      all: revert; }  .btn-grad {      all: revert;      cursor: pointer;      background-image: linear-gradient(to right, #00E701 0%, #00E701 51%, #00E701 100%);      text-align: center;      transition: 0.5s;      padding: 3px;      background-size: 200% auto;      border: #ffc107;      border-radius: 3px; }  .btn-grad:hover {      background-position: right center;      text-decoration: none; }  .btn-grad:active {      opacity: .65; }  .btn-grad:disabled {      cursor: auto;      opacity: .65;      color: #fff; }  .btn-control {      padding-top: 10px!important;      padding-bottom: 10px!important; }  #wdbMenu {      padding: 3px; }  #wdbMenu select, #wdbMenu span input[type=number] {      all: revert;      background: #fff!important;      padding: 3px 5px;      border: 1px solid #ccc;      border-radius: 0; }  #window{      color: black; }  #wdbLog {      overflow-x: auto;      overflow-y: auto;      font-size: 11px;      background: #f0eded; }  #result {      position: relative;      padding-top: 2px;      padding-left: 20px;      padding-bottom: 10px;      height: 40px;      text-align: center;      vertical-align: middle;      font-size: 30px;      font-weight: bold;      font-family: "Geneva", sans-serif; }  html {      font-family: "Geneva", sans-serif; }  .switch {      position: relative;      display: inline-block;      width: 40px;      height: 19px; }  .switch input {      opacity: 0;      width: 0;      height: 0; }  .slider {      position: absolute;      cursor: pointer;      top: 0;      left: 0;      right: 0;      bottom: 0;      background-color: #ccc;      -webkit-transition: .4s;      transition: .4s; }  .slider:before {      position: absolute;      content: "";      height: 19px;      width: 19px;      left: 0px;      bottom: 0px;      background-color: black;      -webkit-transition: .4s;      transition: .4s; }  input:checked + .slider {      background-image: linear-gradient(to right, #00E701 0%, #00E701 51%, #00E701 100%); }  input:focus + .slider {      box-shadow: 0 0 1px #2196F3; }  input:checked + .slider:before {      -webkit-transform: translateX(24px);      -ms-transform: translateX(24px);      transform: translateX(24px); } /* Rounded sliders */  .slider.round {      border-radius: 34px; }  .slider.round:before {      border-radius: 50%; }  .fastmode{      float: right; }  </style> <div id="window">     <div id="toolbar">         <div class="top">             <div id="lights">                 <div class="light red">                     <div class="glyph">×</div>                     <div class="shine"></div>                     <div class="glow"></div>                 </div>                 <div class="light yellow">                     <div class="glyph">-</div>                     <div class="shine"></div>                     <div class="glow"></div>                 </div>                 <div class="light green">                     <div class="glyph">+</div>                     <div class="shine"></div>                     <div class="glow"></div>                 </div>             </div>             <center>                 <div id="title"> github.com/poky1084 </div>             </center>             <div id="bubble">                 <div class="shine"></div>                 <div class="glow"></div>             </div>         </div>     </div>     <div id="body">         <table class="tbl">             <tr>                 <td>                     <div class="wdb-stats" id="wdbStats">                         <div>                             <li class="clearfix"> <span class="float-left">Balance:</span> <span class="float-right"><span id="wdbBalance">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-left">Wagered:</span> <span class="float-right">(<span id="wdbPercentWagered">0.00</span>x) <span id="wdbWagered">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-left">Profit:</span> <span class="float-right" id="wdbWrapPercentProfit">(<span id="wdbPercentProfit">0.00</span>%) <span id="wdbProfit">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-left">W/L/T:</span> </li>                             <li class="clearfix"> <span class="float-left">H/L/Current:</span> </li>                             <li class="clearfix"> <span class="float-left">Time:</span> </li>                         </div>                         <div>                             <li class="clearfix"> <span class="float-left">MaxBet:</span> <span class="float-right"><span id="wdbHighBet">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-left">MaxLose:</span> <span class="float-right"><span id="wdbHighLose">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-left">MaxProfit:</span> <span class="float-right"><span id="wdbHighProfit">0.00000000</span></span>                             </li>                             <li class="clearfix"> <span class="float-right"><span id="wdbBets"><span style="">0</span> / <span style="">0</span> / 0</span>                                 </span>                             </li>                             <li class="clearfix"> <span class="float-right"><span id="wdbHighLowStreak"><span style="">0</span> / <span style="">0</span> / <span id="currentstrk">0</span></span>                                 </span>                             </li>                             <li class="clearfix"> <span class="float-right"><span id="wdbTime">0:0:0:0</span></span>                             </li>                         </div>                     </div>                 </td>                 <td>                     <div class="half" id="chartContainer" style="height: 150px; width: 540px;"></div>                 </td>             </tr>             <tr>                 <td>                     <div style="flex-grow: 1;width: 520px;">                         <div id="result"> </div>                         <div class="wraph" id="wdbWrapHistory">                             <table>                                 <thead>                                     <tr>                                         <th>Bets</th>                                         <th>Game</th>                                         <th>Amount</th>                                         <th>High</th>                                         <th>Multiplier</th>                                         <th>Profit</th>                                         <th>Payout</th>                                         <th>Target</th>                                         <th>Roll</th>                                         <th>Settings</th>                                         <th>BetID</th>                                     </tr>                                 </thead>                                 <tbody id="wdbHistory"></tbody>                             </table>                         </div>                     </div>                     <div id="wdbWrapLog">                         <table id="wdbLog" class="wraph" style="width: 100%; height: 170px;">                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                             <tr>                                 <td>‏‏‎ ‎</td>                             </tr>                         </table>                     </div>                 </td>                 <td>                     <div id="wdbMenu">                         <div style="padding: 5px 2px 5px">                             <button class="btn-grad" id="wdbSaveScriptButton">Save</button>                             <div class="fastmode"> Fast Mode:                                 <label class="switch">                                     <input id="speedChange" type="checkbox"> <span class="slider round"></span> </label>                             </div>                         </div>                     </div>                     <textarea id="editor"></textarea>                     <div id="wdbControlMenu">                         <div id="wdbMenu">                             <button id="wdbStartButton" class="btn-grad btn-control" style="width: 100px;">Start</button>                             <button id="wdbStopButton" class="btn-grad btn-control" style="width: 100px;">Stop</button>                             <select id="wdbMenuCoin" class="wdb-select">                                 <option value="btc">btc</option>                             </select>                             <select id="gameselect" class="gameselect">                                 <option value="dice" selected="selected">dice</option>                                 <option value="limbo">limbo</option>                                 <option value="mines">mines</option>                                 <option value="keno">keno</option>                                 <option value="plinko">plinko</option>                                 <option value="wheel">wheel</option>                                 <option value="roulette">roulette</option>                                 <option value="crash">crash</option>                                 <option value="slide">slide</option>                             </select>                             <select id="themebot" class="themebot">                                 <option value="light" selected="selected">light</option>                                 <option value="dark">dark</option>                                 <option value="blue">blue</option>                                 <option value="black">black</option>                             </select>                             <button id="resetall" class="btn-grad">ResetAll</button>                         </div>                     </div>                 </td>             </tr>         </table>         <p> </p>         <div class="cursor"></div>     </div> </div>')
  
  
 let currency = "btc"
@@ -165,8 +165,8 @@ if(localStorage.getItem("jscode") != null){
 } else {
 	editor.setValue(`chance=49.5 
 bethigh=true
-basebet=0.00001
-nextbet=basebet
+nextbet=0.00001
+basebet=nextbet
 
 dobet = function() {   
 	if (win) {     
@@ -244,18 +244,19 @@ startScoket();
 
 // drag and drop bot
 var draggin = false
-var mydiv = document.getElementById("window");
-//var myeditor = document.getElementById('editor')
+var mydiv = document.getElementById("toolbar");
+var mywindow = document.getElementById('window')
 
 function onMouseDrag({ movementX, movementY }) {
-    let getContainerStyle = window.getComputedStyle(mydiv);
+    let getContainerStyle = window.getComputedStyle(mywindow);
     let leftValue = parseInt(getContainerStyle.left);
     let topValue = parseInt(getContainerStyle.top);
 	
 	if(draggin){
-    mydiv.style.left = `${leftValue + movementX}px`;
-    mydiv.style.top = `${topValue + movementY}px`;
+    mywindow.style.left = `${leftValue + movementX}px`;
+    mywindow.style.top = `${topValue + movementY}px`;
 	}
+	
 }
 
 mydiv.addEventListener("mousedown", () => {
@@ -270,20 +271,13 @@ mydiv.addEventListener("mouseup", () => {
 document.body.addEventListener("mouseup", () => {
 	draggin = false
 });
+
+
+
 /*
-myeditor.addEventListener("mouseup", () => {
-	draggin = false
-	mydiv.removeEventListener("mousemove", onMouseDrag);
-});
-myeditor.addEventListener("mousedown", () => {
-	draggin = false
-	mydiv.removeEventListener("mousemove", onMouseDrag);
-});
-*/
 var editorSave = document.getElementById("editor");
-
 editorSave.addEventListener('input', function() {localStorage.setItem("jscode", editor.getValue()); }, false);
-
+*/
 var downloadBtn = document.getElementById("wdbSaveScriptButton");
 
 downloadBtn.addEventListener('click', function() { downloadFile(); }, false);
@@ -331,91 +325,7 @@ function startScoket(){
 						multiplier_start = obj.payload.data.crash.event.multiplier
 						document.getElementById("result").innerHTML = obj.payload.data.crash.event.multiplier.toFixed(2) + 'x'
 					} 
-					if(obj.payload.data.crash.event.status == "crash"){
-							crash_bet_placed = false;
-							slide_bet_placed = false;
-							make_slide_bet = false;
-							if(theme == "light"){
-								document.getElementById("result").style.color = "black";
-							} else {
-								document.getElementById("result").style.color = "white";
-							}
-							document.getElementById("result").innerHTML = "Crash at " + obj.payload.data.crash.event.multiplier.toFixed(2);
-							//var prog = document.getElementById("progress");
-							//var elem = document.getElementById("myBar");
-							//prog.style.display = "none";
-							//elem.style.width = "0%";
-							//betcount++;
-							//bets = betcount;
-							lastBet.crashAt = obj.payload.data.crash.event.multiplier;
-							
-							
-							var row = document.createElement("tr");
-							//betcount++;
-							row.style.background = "#e8e9eb";
-							//win = null
-							//lastBet.win = null
-							
-							var tdbets = document.createElement("td");
-							var tdamount = document.createElement("td");
-							var tdhigh = document.createElement("td");
-							var tdTargetChance = document.createElement("td");
-							var tdRollChance= document.createElement("td");
-							var tdProfit = document.createElement("td");
-							var tdPayout = document.createElement("td");
-							var tdTargetNumber = document.createElement("td");
-							var tdRollNumber = document.createElement("td");
-							var tdNonce = document.createElement("td");
-							var tdBetID = document.createElement("td");
-							
-							tdbets.innerHTML = ""
-							tdamount.innerHTML = "CrashAt"
-							
-							var tdcheck = document.createElement("input");
-							tdcheck.type = "checkbox";
-							tdcheck.name = "checked";
-							tdcheck.checked = "checked";
-							tdcheck.id = "checked";
-							
-							tdhigh.appendChild(tdcheck);
-							tdTargetChance.innerHTML = lastBet.crashAt.toFixed(4) + "";
-							tdRollChance.innerHTML = ""
-							tdProfit.innerHTML = ""
-							tdTargetNumber.innerHTML = ""
-							//lastBet.targetNumber = target_multi;
-							tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4) + "";
-							tdNonce.innerHTML = game;
-							tdBetID.innerHTML = "";
-							tdPayout.innerHTML = "";
-							
-							
-							row.appendChild(tdbets);
-							row.appendChild(tdNonce);
-							row.appendChild(tdamount);
-							row.appendChild(tdhigh);
-							row.appendChild(tdTargetChance);
-							row.appendChild(tdProfit);
-							row.appendChild(tdPayout);
-							row.appendChild(tdTargetNumber);
-							row.appendChild(tdRollNumber);
-							row.appendChild(tdRollChance);
-							row.appendChild(tdBetID);
-							var table = document.getElementById("wdbHistory");							
-							table.prepend(row);
-			
-							if (table.rows.length > 50)
-							{
-								table.deleteRow(table.rows.length - 1);
-							}
-							
-							if(cashedoutauto == false){
-								
-								
-							}
-							
-							
-	
-						} 
+					
 					if(obj.payload.data.crash.event.result == "autocashout")
 					{
 						cashedoutauto = true;
@@ -718,7 +628,91 @@ function startScoket(){
 						target_multi = 99 / chance;
 				
 					}
-
+					if(obj.payload.data.crash.event.status == "crash"){
+							crash_bet_placed = false;
+							slide_bet_placed = false;
+							make_slide_bet = false;
+							if(theme == "light"){
+								document.getElementById("result").style.color = "black";
+							} else {
+								document.getElementById("result").style.color = "white";
+							}
+							document.getElementById("result").innerHTML = "Crash at " + obj.payload.data.crash.event.multiplier.toFixed(2);
+							//var prog = document.getElementById("progress");
+							//var elem = document.getElementById("myBar");
+							//prog.style.display = "none";
+							//elem.style.width = "0%";
+							//betcount++;
+							//bets = betcount;
+							lastBet.crashAt = obj.payload.data.crash.event.multiplier;
+							
+							
+							var row = document.createElement("tr");
+							//betcount++;
+							row.style.background = "#e8e9eb";
+							//win = null
+							//lastBet.win = null
+							
+							var tdbets = document.createElement("td");
+							var tdamount = document.createElement("td");
+							var tdhigh = document.createElement("td");
+							var tdTargetChance = document.createElement("td");
+							var tdRollChance= document.createElement("td");
+							var tdProfit = document.createElement("td");
+							var tdPayout = document.createElement("td");
+							var tdTargetNumber = document.createElement("td");
+							var tdRollNumber = document.createElement("td");
+							var tdNonce = document.createElement("td");
+							var tdBetID = document.createElement("td");
+							
+							tdbets.innerHTML = ""
+							tdamount.innerHTML = "CrashAt"
+							
+							var tdcheck = document.createElement("input");
+							tdcheck.type = "checkbox";
+							tdcheck.name = "checked";
+							tdcheck.checked = "checked";
+							tdcheck.id = "checked";
+							
+							tdhigh.appendChild(tdcheck);
+							tdTargetChance.innerHTML = lastBet.crashAt.toFixed(4) + "";
+							tdRollChance.innerHTML = ""
+							tdProfit.innerHTML = ""
+							tdTargetNumber.innerHTML = ""
+							//lastBet.targetNumber = target_multi;
+							tdRollNumber.innerHTML = lastBet.crashAt.toFixed(4) + "";
+							tdNonce.innerHTML = game;
+							tdBetID.innerHTML = "";
+							tdPayout.innerHTML = "";
+							
+							
+							row.appendChild(tdbets);
+							row.appendChild(tdNonce);
+							row.appendChild(tdamount);
+							row.appendChild(tdhigh);
+							row.appendChild(tdTargetChance);
+							row.appendChild(tdProfit);
+							row.appendChild(tdPayout);
+							row.appendChild(tdTargetNumber);
+							row.appendChild(tdRollNumber);
+							row.appendChild(tdRollChance);
+							row.appendChild(tdBetID);
+							var table = document.getElementById("wdbHistory");							
+							table.prepend(row);
+			
+							if (table.rows.length > 50)
+							{
+								table.deleteRow(table.rows.length - 1);
+							}
+							
+							if(cashedoutauto == false){
+								
+								
+							}
+							
+							
+	
+						} 
 					
 						
 						/*if(obj.payload.data.crash.event.result == "autocashout")
@@ -1301,13 +1295,13 @@ function datacrash(json){
 
 
 
-function crashbet(amount, target_multi){
+function crashbet(betsize, target_multi){
 	
 	
 	var body = {
 		variables:{
         "cashoutAt": target_multi,
-        "amount": amount,
+        "amount": betsize,
         "currency": document.getElementById('wdbMenuCoin').value
 		},
 		query:"mutation MultiplayerCrashBet($amount: Float!, $currency: CurrencyEnum!, $cashoutAt: Float!) {\n  multiplayerCrashBet(amount: $amount, currency: $currency, cashoutAt: $cashoutAt) {\n    ...MultiplayerCrashBet\n    user {\n      id\n      activeCrashBet {\n        ...MultiplayerCrashBet\n      }\n    }\n  }\n}\n\nfragment MultiplayerCrashBet on MultiplayerCrashBet {\n  id\n  user {\n    id\n    name\n  }\n  payoutMultiplier\n  gameId\n  amount\n  payout\n  currency\n  result\n  updatedAt\n  cashoutAt\n  btcAmount: amount(currency: btc)\n}\n"		}
@@ -1324,7 +1318,7 @@ function crashbet(amount, target_multi){
 		if(running == true)
 		{
 			setTimeout(() => {
-				//crashbet(amount, target_multi)							
+				//crashbet(betsize, target_multi)							
 			}, "2000");
 			
 		}
@@ -1332,12 +1326,12 @@ function crashbet(amount, target_multi){
 	
 }
 
-function slidebet(amount, chance, betidentifier){
+function slidebet(betsize, chance, betidentifier){
 	var body = {
 		variables:{
         "identifier": randomString(21),
         "cashoutAt": (99 / chance),
-        "amount": amount,
+        "amount": betsize,
         "currency": document.getElementById('wdbMenuCoin').value
 		},
 		query:"mutation MultiplayerSlideBet($amount: Float!, $currency: CurrencyEnum!, $cashoutAt: Float!, $identifier: String!) {\n  multiplayerSlideBet(\n    amount: $amount\n    currency: $currency\n    cashoutAt: $cashoutAt\n    identifier: $identifier\n  ) {\n    __typename\n    ...MultiplayerSlideBet\n    user {\n      id\n      activeSlideBet {\n        ...MultiplayerSlideBet\n      }\n    }\n  }\n}\n\nfragment MultiplayerSlideBet on MultiplayerSlideBet {\n  id\n  user {\n    id\n    name\n    preferenceHideBets\n  }\n  payoutMultiplier\n  gameId\n  amount\n  payout\n  currency\n  slideResult: result\n  updatedAt\n  cashoutAt\n  btcAmount: amount(currency: btc)\n  active\n  createdAt\n}\n"		}
@@ -1355,7 +1349,7 @@ function slidebet(amount, chance, betidentifier){
 		if(running == true)
 		{
 			setTimeout(() => {
-				//slidebet(amount, target_multi)							
+				//slidebet(betsize, target_multi)							
 			}, "2000");
 			
 		}
@@ -1693,12 +1687,12 @@ function outbals(json){
 	}
 }
 
-function LimboBet(amount, target_multi){
+function LimboBet(betsize, target_multi){
 	var body = {
 		variables:{
 		"multiplierTarget": target_multi,
         "identifier": randomString(21),
-        "amount": amount,
+        "amount": betsize,
         "currency": document.getElementById('wdbMenuCoin').value
 		},
 		query:"mutation LimboBet($amount: Float!, $multiplierTarget: Float!, $currency: CurrencyEnum!, $identifier: String!) {\n  limboBet(\n    amount: $amount\n    currency: $currency\n    multiplierTarget: $multiplierTarget\n    identifier: $identifier\n  ) {\n    ...CasinoBet\n    state {\n      ...CasinoGameLimbo\n    }\n  }\n}\n\nfragment CasinoBet on CasinoBet {\n  id\n  active\n  payoutMultiplier\n  amountMultiplier\n  amount\n  payout\n  updatedAt\n  currency\n  game\n  user {\n    id\n    name\n  }\n}\n\nfragment CasinoGameLimbo on CasinoGameLimbo {\n  result\n  multiplierTarget\n}\n"	}
@@ -1715,7 +1709,7 @@ function LimboBet(amount, target_multi){
 		if(running == true)
 		{
 			setTimeout(() => {
-				LimboBet(amount, target_multi)							
+				LimboBet(betsize, target_multi)							
 			}, "2000");
 			
 		}
@@ -1723,7 +1717,7 @@ function LimboBet(amount, target_multi){
 	
 }
 
-function DiceBet(amount, chance, bethigh){
+function DiceBet(betsize, chance, bethigh){
 	if(window.location.host.includes("primedice")){
 	
 		var target = 49.5
@@ -1740,7 +1734,7 @@ function DiceBet(amount, chance, bethigh){
 			variables:{ 
 			"target": target,
 			"condition": cond,
-			"amount": amount,
+			"amount": betsize,
 			"currency": document.getElementById('wdbMenuCoin').value
 			},
 			operationName: "PrimediceRoll",
@@ -1758,7 +1752,7 @@ function DiceBet(amount, chance, bethigh){
 			if(running == true)
 			{
 				setTimeout(() => {
-					 DiceBet(amount, chance, bethigh)							
+					 DiceBet(betsize, chance, bethigh)							
 				}, "2000");
 				
 			}
@@ -1781,7 +1775,7 @@ function DiceBet(amount, chance, bethigh){
 		"target": target,
         "condition": cond,
         "identifier": randomString(21),
-        "amount": amount,
+        "amount": betsize,
         "currency": document.getElementById('wdbMenuCoin').value
 		},
 		query:"mutation DiceRoll($amount: Float!, $target: Float!, $condition: CasinoGameDiceConditionEnum!, $currency: CurrencyEnum!, $identifier: String!) {\n  diceRoll(\n    amount: $amount\n    target: $target\n    condition: $condition\n    currency: $currency\n    identifier: $identifier\n  ) {\n    ...CasinoBet\n    state {\n      ...CasinoGameDice\n    }\n  }\n}\n\nfragment CasinoBet on CasinoBet {\n  id\n  active\n  payoutMultiplier\n  amountMultiplier\n  amount\n  payout\n  updatedAt\n  currency\n  game\n  user {\n    id\n    name\n  }\n}\n\nfragment CasinoGameDice on CasinoGameDice {\n  result\n  target\n  condition\n}\n"	}
@@ -1798,7 +1792,7 @@ function DiceBet(amount, chance, bethigh){
 		if(running == true)
 		{
 			setTimeout(() => {
-				 DiceBet(amount, chance, bethigh)							
+				 DiceBet(betsize, chance, bethigh)							
 			}, "2000");
 			
 		}
@@ -1807,10 +1801,10 @@ function DiceBet(amount, chance, bethigh){
 	
 }
 
-function minebet(amount, fieldcount, minecount){
+function minebet(betsize, fieldcount, minecount){
 	var body = {
 		variables:{
-        "amount": amount,
+        "amount": betsize,
         "currency": document.getElementById('wdbMenuCoin').value,
         "identifier": randomString(21),
         "minesCount": minecount,
@@ -1831,7 +1825,7 @@ function minebet(amount, fieldcount, minecount){
 		if(running == true)
 		{
 			setTimeout(() => {
-				minebet(amount, fieldcount, minecount)				
+				minebet(betsize, fieldcount, minecount)				
 			}, "1000");
 			
 		}
@@ -1839,10 +1833,10 @@ function minebet(amount, fieldcount, minecount){
 	
 }
 
-function kenobet(amount, kenoselected, kenorisk){
+function kenobet(betsize, kenoselected, kenorisk){
 	var body = {
 		variables:{
-        "amount": amount,
+        "amount": betsize,
         "currency": document.getElementById('wdbMenuCoin').value,
         "identifier": randomString(21),
         "risk": kenorisk,
@@ -1863,7 +1857,7 @@ function kenobet(amount, kenoselected, kenorisk){
 		if(running == true)
 		{
 			setTimeout(() => {
-				kenobet(amount, kenoselected, kenorisk)					
+				kenobet(betsize, kenoselected, kenorisk)					
 			}, "1000");
 			
 		}
@@ -1871,10 +1865,10 @@ function kenobet(amount, kenoselected, kenorisk){
 	
 }
 
-function plinkobet(amount, plinkorows, plinkorisk){
+function plinkobet(betsize, plinkorows, plinkorisk){
 	var body = {
 		variables:{
-        "amount": amount,
+        "amount": betsize,
         "currency": document.getElementById('wdbMenuCoin').value,
         "identifier": randomString(21),
         "risk": plinkorisk,
@@ -1895,7 +1889,7 @@ function plinkobet(amount, plinkorows, plinkorisk){
 		if(running == true)
 		{
 			setTimeout(() => {
-				plinkobet(amount, plinkorows, plinkorisk)				
+				plinkobet(betsize, plinkorows, plinkorisk)				
 			}, "1000");
 			
 		}
@@ -1903,10 +1897,10 @@ function plinkobet(amount, plinkorows, plinkorisk){
 	
 }
 
-function wheelbet(amount, wheelsegments, wheelrisk){
+function wheelbet(betsize, wheelsegments, wheelrisk){
 	var body = {
 		variables:{
-        "amount": amount,
+        "amount": betsize,
         "currency": document.getElementById('wdbMenuCoin').value,
         "identifier": randomString(21),
         "risk": wheelrisk,
@@ -1927,7 +1921,7 @@ function wheelbet(amount, wheelsegments, wheelrisk){
 		if(running == true)
 		{
 			setTimeout(() => {
-				wheelbet(amount, wheelsegments, wheelrisk)			
+				wheelbet(betsize, wheelsegments, wheelrisk)			
 			}, "1000");
 			
 		}
@@ -1995,8 +1989,8 @@ function roulettebet(selection){
 }
 
 function data(json){
-	if(running == true)
-	{
+	
+	
 		if(json.errors != null){
 			if(!json.errors[0].errorType.includes("parallelCasinoBet")){
 			log(json.errors[0].errorType + ". " +json.errors[0].message )
@@ -3747,25 +3741,25 @@ function data(json){
 			roulettebet(selection)
 			} 
 			if(game == "wheel"){
-			wheelbet(amount, wheelsegments, wheelrisk)
+			wheelbet(nextbet, wheelsegments, wheelrisk)
 			} 		
 			if(game == "plinko"){
-			plinkobet(amount, plinkorows, plinkorisk)
+			plinkobet(nextbet, plinkorows, plinkorisk)
 			} 
 			if(game == "mines"){
-			minebet(amount, fieldcount, minecount)
+			minebet(nextbet, fieldcount, minecount)
 			}
 			if(game == "keno"){
-			kenobet(amount, kenoselected, kenorisk)
+			kenobet(nextbet, kenoselected, kenorisk)
 			}
 			if(game == "dice"){
-			DiceBet(amount, chance, bethigh)
+			DiceBet(nextbet, chance, bethigh)
 			}
 			if(game == "limbo"){
-			LimboBet(amount, target_multi);
+			LimboBet(nextbet, target_multi);
 			}
 		}
-	}
+	
 }
 
 
@@ -3819,6 +3813,9 @@ checkbox.addEventListener('change', (event) => {
 function start(){
 		running = true; countTime(); 
 		run_clicked = true;
+		btnStart.disabled = true;  
+		localStorage.setItem("jscode", editor.getValue());
+		currency = document.getElementById('wdbMenuCoin').value;
 		document.getElementById("result").innerHTML = "";
 		if(theme == "light"){
 			document.getElementById("result").style.color = "black";
@@ -3826,8 +3823,8 @@ function start(){
 			document.getElementById("result").style.color = "white";
 		}
 		game = document.getElementById("gameselect").value;
-		eval(editor.getValue());
-		
+		var evalcode = editor.getValue();
+		setTimeout(evalcode, 1);
 		
 	kenorisk = risk
 	kenoselected = numbers
@@ -3838,89 +3835,90 @@ function start(){
 	wheelrisk = risk
 	wheelsegments = segments
 	selection = chips
-	localStorage.setItem("jscode", editor.getValue());
- currency = document.getElementById('wdbMenuCoin').value;
+
  
- btnStart.disabled = true;  
+ 
+
  started_bal = balance; 
  amount = nextbet;
  target_multi = 99 / chance
+ //return
 	var selectedGame = game;
 	if(selectedGame == "dice"){
 		if(speedmode == false){
-			DiceBet(amount, chance, bethigh)
+			DiceBet(nextbet, chance, bethigh)
 		} else {
 			setTimeout(function () {
-            DiceBet(amount, chance, bethigh)
+            DiceBet(nextbet, chance, bethigh)
           }, 200);
 
           setTimeout(function () {
-            DiceBet(amount, chance, bethigh)
+            DiceBet(nextbet, chance, bethigh)
           }, 400);
 
 		}
 	} else if(selectedGame == "limbo"){
 		if(speedmode == false){
-			LimboBet(amount, 99 / chance);
+			LimboBet(nextbet, 99 / chance);
 		} else {
 			setTimeout(function () {
-            LimboBet(amount, 99 / chance); 
+            LimboBet(nextbet, 99 / chance); 
           }, 200);
 
           setTimeout(function () {
-            LimboBet(amount, 99 / chance); 
+            LimboBet(nextbet, 99 / chance); 
           }, 400);
           
 		}
 	} else if(selectedGame == "mines"){
 		if(speedmode == false){
-			minebet(amount, fieldcount, minecount)
+			minebet(nextbet, fieldcount, minecount)
 		} else {
 			setTimeout(function () {
-             minebet(amount, fieldcount, minecount)
+             minebet(nextbet, fieldcount, minecount)
           }, 200);
 
           setTimeout(function () {
-             minebet(amount, fieldcount, minecount)
+             minebet(nextbet, fieldcount, minecount)
           }, 400);
           
 		}
 	} else if(selectedGame == "keno"){
 		if(speedmode == false){
-			kenobet(amount, kenoselected, kenorisk)
+			kenobet(nextbet, kenoselected, kenorisk)
 		} else {
 			setTimeout(function () {
-             kenobet(amount, kenoselected, kenorisk)
+             kenobet(nextbet, kenoselected, kenorisk)
           }, 200);
 
           setTimeout(function () {
-             kenobet(amount, kenoselected, kenorisk)
+             kenobet(nextbet, kenoselected, kenorisk)
           }, 400);
           
 		}
 	} else if(selectedGame == "plinko"){
 		if(speedmode == false){
-			plinkobet(amount, plinkorows, plinkorisk)
+			plinkobet(nextbet, plinkorows, plinkorisk)
 		} else {
 			setTimeout(function () {
-             plinkobet(amount, plinkorows, plinkorisk)
+             plinkobet(nextbet, plinkorows, plinkorisk)
           }, 200);
 
           setTimeout(function () {
-             plinkobet(amount, plinkorows, plinkorisk)
+             plinkobet(nextbet, plinkorows, plinkorisk)
           }, 400);
           
 		}
 	} else if(selectedGame == "wheel"){
 		if(speedmode == false){
-			wheelbet(amount, wheelsegments, wheelrisk)
+			wheelbet(nextbet, wheelsegments, wheelrisk)
 		} else {
 			setTimeout(function () {
-             wheelbet(amount, wheelsegments, wheelrisk)
+             wheelbet(nextbet, wheelsegments, wheelrisk)
           }, 200);
 
           setTimeout(function () {
-             wheelbet(amount, wheelsegments, wheelrisk)
+             wheelbet(nextbet, wheelsegments, wheelrisk)
           }, 400);
 		}
 	} else if(selectedGame == "roulette"){
