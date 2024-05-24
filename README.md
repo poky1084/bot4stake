@@ -3,7 +3,8 @@ a javascript coded bot for Stake, Primedice, copy-paste in the console. (Dice, L
 the strategy script must be coded in javascript, and not Lua script. 
 
 # Videos: <br /> 
-Install: https://cos.tv/videos/play/52855058251682816 <br />
+install extension: https://odysee.com/@poky1084:8/bot4stake:5 <br />
+install console: https://cos.tv/videos/play/52855058251682816 <br />
 
 # Info: <br />
 Please favourite the repo in case you liked/used it. Thank you!
