@@ -199,7 +199,7 @@ if (localStorage.getItem("themebot") != null) {
 		document.getElementById("window").style.background="#383838";
 		document.getElementById("wdbLog").style.background="#383838";
 		document.getElementById("window").style.color="white";
-		document.getElementsByClassName("CodeMirror")[0].style.background = "#383838"
+		document.getElementsByClassName("CodeMirror")[0].style.background = "white"
 		document.getElementsByClassName("CodeMirror")[0].style.color = "white"				
 		document.getElementById("result").style.color = "white";
 						
@@ -221,7 +221,7 @@ if (localStorage.getItem("themebot") != null) {
 		document.getElementById("window").style.background="#213743";
 		document.getElementById("wdbLog").style.background="#213743";
 		document.getElementById("window").style.color="white";
-		document.getElementsByClassName("CodeMirror")[0].style.background = "#213743"
+		document.getElementsByClassName("CodeMirror")[0].style.background = "white"
 		document.getElementsByClassName("CodeMirror")[0].style.color = "white"
 		document.getElementById("result").style.color = "white";
 	} else if(theme == "black") {
@@ -231,7 +231,7 @@ if (localStorage.getItem("themebot") != null) {
 		document.getElementById("window").style.background="black";
 		document.getElementById("wdbLog").style.background="black";
 		document.getElementById("window").style.color="#00E701";
-		document.getElementsByClassName("CodeMirror")[0].style.background = "black"
+		document.getElementsByClassName("CodeMirror")[0].style.background = "white"
 		document.getElementsByClassName("CodeMirror")[0].style.color = "#00E701"
 		document.getElementById("result").style.color = "white";
 	}
@@ -1461,7 +1461,7 @@ themebots.addEventListener('change', function(e) {
 		document.getElementById("window").style.background="#383838";
 		document.getElementById("wdbLog").style.background="#383838";
 		document.getElementById("window").style.color="white";
-		document.getElementsByClassName("CodeMirror")[0].style.background = "#383838"
+		document.getElementsByClassName("CodeMirror")[0].style.background = "white"
 		document.getElementsByClassName("CodeMirror")[0].style.color = "white"				
 		document.getElementById("result").style.color = "white";
 						
@@ -1483,7 +1483,7 @@ themebots.addEventListener('change', function(e) {
 		document.getElementById("window").style.background="#213743";
 		document.getElementById("wdbLog").style.background="#213743";
 		document.getElementById("window").style.color="white";
-		document.getElementsByClassName("CodeMirror")[0].style.background = "#213743"
+		document.getElementsByClassName("CodeMirror")[0].style.background = "white"
 		document.getElementsByClassName("CodeMirror")[0].style.color = "white"
 		document.getElementById("result").style.color = "white";
 	} else if(theme == "black") {
@@ -1493,7 +1493,7 @@ themebots.addEventListener('change', function(e) {
 		document.getElementById("window").style.background="black";
 		document.getElementById("wdbLog").style.background="black";
 		document.getElementById("window").style.color="#00E701";
-		document.getElementsByClassName("CodeMirror")[0].style.background = "black"
+		document.getElementsByClassName("CodeMirror")[0].style.background = "white"
 		document.getElementsByClassName("CodeMirror")[0].style.color = "#00E701"
 		document.getElementById("result").style.color = "white";
 	}
