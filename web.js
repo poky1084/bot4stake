@@ -1709,7 +1709,9 @@ function LimboBet(betsize, target_multi){
 		if(running == true)
 		{
 			setTimeout(() => {
-				LimboBet(betsize, target_multi)							
+				if(running){
+				LimboBet(betsize, target_multi)
+				}				
 			}, "2000");
 			
 		}
@@ -1752,7 +1754,9 @@ function DiceBet(betsize, chance, bethigh){
 			if(running == true)
 			{
 				setTimeout(() => {
-					 DiceBet(betsize, chance, bethigh)							
+					if(running){
+					 DiceBet(betsize, chance, bethigh)	
+					}					 
 				}, "2000");
 				
 			}
@@ -1792,7 +1796,9 @@ function DiceBet(betsize, chance, bethigh){
 		if(running == true)
 		{
 			setTimeout(() => {
-				 DiceBet(betsize, chance, bethigh)							
+				if(running){
+				 DiceBet(betsize, chance, bethigh)		
+				}				 
 			}, "2000");
 			
 		}
@@ -1825,7 +1831,9 @@ function minebet(betsize, fieldcount, minecount){
 		if(running == true)
 		{
 			setTimeout(() => {
-				minebet(betsize, fieldcount, minecount)				
+				if(running){
+				minebet(betsize, fieldcount, minecount)	
+				}				
 			}, "1000");
 			
 		}
@@ -1857,7 +1865,9 @@ function kenobet(betsize, kenoselected, kenorisk){
 		if(running == true)
 		{
 			setTimeout(() => {
-				kenobet(betsize, kenoselected, kenorisk)					
+				if(running){
+				kenobet(betsize, kenoselected, kenorisk)	
+				}				
 			}, "1000");
 			
 		}
@@ -1889,7 +1899,9 @@ function plinkobet(betsize, plinkorows, plinkorisk){
 		if(running == true)
 		{
 			setTimeout(() => {
-				plinkobet(betsize, plinkorows, plinkorisk)				
+				if(running){
+				plinkobet(betsize, plinkorows, plinkorisk)	
+				}				
 			}, "1000");
 			
 		}
@@ -1921,7 +1933,9 @@ function wheelbet(betsize, wheelsegments, wheelrisk){
 		if(running == true)
 		{
 			setTimeout(() => {
-				wheelbet(betsize, wheelsegments, wheelrisk)			
+				if(running){
+				wheelbet(betsize, wheelsegments, wheelrisk)	
+				}				
 			}, "1000");
 			
 		}
@@ -1980,7 +1994,9 @@ function roulettebet(selection){
 		if(running == true)
 		{	
 			setTimeout(() => {
-				roulettebet(selection)			
+				if(running){
+				roulettebet(selection)		
+				}				
 			}, "1000");
 			
 		}
@@ -3718,24 +3734,26 @@ function data(json){
 			
 		}
 		
-		if(running){
-			dobet();
-			amount = nextbet;
-			target_multi = 99 / chance;
-						
-			minecount = mines
-			fieldcount = fields
-			
-			kenorisk = risk
-			kenoselected = numbers
+		dobet();
+		
+		amount = nextbet;
+		target_multi = 99 / chance;
+					
+		minecount = mines
+		fieldcount = fields
+		
+		kenorisk = risk
+		kenoselected = numbers
 
-			plinkorisk = risk
-			plinkorows = rows	
-			
-			wheelrisk = risk
-			wheelsegments = segments
-			
-			selection = chips
+		plinkorisk = risk
+		plinkorows = rows	
+		
+		wheelrisk = risk
+		wheelsegments = segments
+		
+		selection = chips
+		
+		if(running){
 			
 			if(game == "roulette"){
 			roulettebet(selection)
