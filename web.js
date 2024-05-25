@@ -2,7 +2,7 @@
  
  
 let currency = "btc"
-var tokenapi = "";
+var token = "";
 
 var target_multi = 1.01;
 var basebet = 0;
@@ -95,6 +95,8 @@ let	selection = chips
   if (parts.length === 2) return parts.pop().split(';').shift();
 }
  
+token = getCookie("session")
+
 function randomString(length) {
 	var chars = '_-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-';
 	var result = '';
@@ -311,7 +313,7 @@ function startScoket(){
     
   websocket.onopen = () => {
  
-    websocket.send(JSON.stringify({"type":"connection_init","payload":{"accessToken":getCookie("session"),"language":"en","lockdownToken":"s5MNWtjTM5TvCMkAzxov"}}));
+    websocket.send(JSON.stringify({"type":"connection_init","payload":{"accessToken":token,"language":"en","lockdownToken":"s5MNWtjTM5TvCMkAzxov"}}));
   };
 
   
@@ -1312,14 +1314,14 @@ function crashbet(betsize, target_multi){
 		variables:{
         "cashoutAt": target_multi,
         "amount": betsize,
-        "currency": document.getElementById('wdbMenuCoin').value
+        "currency": currency
 		},
 		query:"mutation MultiplayerCrashBet($amount: Float!, $currency: CurrencyEnum!, $cashoutAt: Float!) {\n  multiplayerCrashBet(amount: $amount, currency: $currency, cashoutAt: $cashoutAt) {\n    ...MultiplayerCrashBet\n    user {\n      id\n      activeCrashBet {\n        ...MultiplayerCrashBet\n      }\n    }\n  }\n}\n\nfragment MultiplayerCrashBet on MultiplayerCrashBet {\n  id\n  user {\n    id\n    name\n  }\n  payoutMultiplier\n  gameId\n  amount\n  payout\n  currency\n  result\n  updatedAt\n  cashoutAt\n  btcAmount: amount(currency: btc)\n}\n"		}
 		
 	fetch('https://' +  window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => datacrash(json))
@@ -1342,7 +1344,7 @@ function slidebet(betsize, chance, betidentifier){
         "identifier": randomString(21),
         "cashoutAt": (99 / chance),
         "amount": betsize,
-        "currency": document.getElementById('wdbMenuCoin').value
+        "currency": currency
 		},
 		query:"mutation MultiplayerSlideBet($amount: Float!, $currency: CurrencyEnum!, $cashoutAt: Float!, $identifier: String!) {\n  multiplayerSlideBet(\n    amount: $amount\n    currency: $currency\n    cashoutAt: $cashoutAt\n    identifier: $identifier\n  ) {\n    __typename\n    ...MultiplayerSlideBet\n    user {\n      id\n      activeSlideBet {\n        ...MultiplayerSlideBet\n      }\n    }\n  }\n}\n\nfragment MultiplayerSlideBet on MultiplayerSlideBet {\n  id\n  user {\n    id\n    name\n    preferenceHideBets\n  }\n  payoutMultiplier\n  gameId\n  amount\n  payout\n  currency\n  slideResult: result\n  updatedAt\n  cashoutAt\n  btcAmount: amount(currency: btc)\n  active\n  createdAt\n}\n"		}
 		
@@ -1350,7 +1352,7 @@ function slidebet(betsize, chance, betidentifier){
 	fetch('https://' +  window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => dataslide(json, betidentifier))
@@ -1376,7 +1378,7 @@ function vault(e){
 var body = {
 		operationName:"CreateVaultDeposit",
 		variables:{
-        "currency": document.getElementById('wdbMenuCoin').value,
+        "currency": currency,
         "amount": e
 		},
 		query:"mutation CreateVaultDeposit($currency: CurrencyEnum!, $amount: Float!) {\n  createVaultDeposit(currency: $currency, amount: $amount) {\n    id\n    amount\n    currency\n    user {\n      id\n      balances {\n        available {\n          amount\n          currency\n          __typename\n        }\n        vault {\n          amount\n          currency\n          __typename\n        }\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n"		}
@@ -1384,7 +1386,7 @@ var body = {
 	fetch('https://' +   window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => outvault(json))
@@ -1624,7 +1626,7 @@ var body = {
 	fetch('https://' +  window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => outseed(json))
@@ -1657,7 +1659,7 @@ var body = {
 	fetch('https://' +  window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => outbals(json))
@@ -1703,14 +1705,14 @@ function LimboBet(betsize, target_multi){
 		"multiplierTarget": target_multi,
         "identifier": randomString(21),
         "amount": betsize,
-        "currency": document.getElementById('wdbMenuCoin').value
+        "currency": currency
 		},
 		query:"mutation LimboBet($amount: Float!, $multiplierTarget: Float!, $currency: CurrencyEnum!, $identifier: String!) {\n  limboBet(\n    amount: $amount\n    currency: $currency\n    multiplierTarget: $multiplierTarget\n    identifier: $identifier\n  ) {\n    ...CasinoBet\n    state {\n      ...CasinoGameLimbo\n    }\n  }\n}\n\nfragment CasinoBet on CasinoBet {\n  id\n  active\n  payoutMultiplier\n  amountMultiplier\n  amount\n  payout\n  updatedAt\n  currency\n  game\n  user {\n    id\n    name\n  }\n}\n\nfragment CasinoGameLimbo on CasinoGameLimbo {\n  result\n  multiplierTarget\n}\n"	}
 		
 	fetch('https://' +  window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => data(json))
@@ -1747,7 +1749,7 @@ function DiceBet(betsize, chance, bethigh){
 			"target": target,
 			"condition": cond,
 			"amount": betsize,
-			"currency": document.getElementById('wdbMenuCoin').value
+			"currency": currency
 			},
 			operationName: "PrimediceRoll",
 			query:"mutation PrimediceRoll($amount: Float!, $target: Float!, $condition: CasinoGamePrimediceConditionEnum!, $currency: CurrencyEnum!) {\n  primediceRoll(amount: $amount, target: $target, condition: $condition, currency: $currency) {\n    ...CasinoBetFragment\n    state {\n      ...PrimediceStateFragment\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment CasinoBetFragment on CasinoBet {\n  id\n  active\n  payoutMultiplier\n  amountMultiplier\n  amount\n  payout\n  updatedAt\n  currency\n  game\n  user {\n    id\n    name\n    __typename\n  }\n  __typename\n}\n\nfragment PrimediceStateFragment on CasinoGamePrimedice {\n  result\n  target\n  condition\n  __typename\n}\n"	}
@@ -1755,7 +1757,7 @@ function DiceBet(betsize, chance, bethigh){
 		fetch('https://' +  window.location.host + '/_api/graphql', {
 			method: 'post',
 			body:    JSON.stringify(body),
-			headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+			headers: { 'Content-Type': 'application/json','x-access-token': token},
 		})
 		.then(res => res.json())
 		.then(json => data(json))
@@ -1790,14 +1792,14 @@ function DiceBet(betsize, chance, bethigh){
         "condition": cond,
         "identifier": randomString(21),
         "amount": betsize,
-        "currency": document.getElementById('wdbMenuCoin').value
+        "currency": currency
 		},
 		query:"mutation DiceRoll($amount: Float!, $target: Float!, $condition: CasinoGameDiceConditionEnum!, $currency: CurrencyEnum!, $identifier: String!) {\n  diceRoll(\n    amount: $amount\n    target: $target\n    condition: $condition\n    currency: $currency\n    identifier: $identifier\n  ) {\n    ...CasinoBet\n    state {\n      ...CasinoGameDice\n    }\n  }\n}\n\nfragment CasinoBet on CasinoBet {\n  id\n  active\n  payoutMultiplier\n  amountMultiplier\n  amount\n  payout\n  updatedAt\n  currency\n  game\n  user {\n    id\n    name\n  }\n}\n\nfragment CasinoGameDice on CasinoGameDice {\n  result\n  target\n  condition\n}\n"	}
 		
 	fetch('https://' +  window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => data(json))
@@ -1821,7 +1823,7 @@ function minebet(betsize, fieldcount, minecount){
 	var body = {
 		variables:{
         "amount": betsize,
-        "currency": document.getElementById('wdbMenuCoin').value,
+        "currency": currency,
         "identifier": randomString(21),
         "minesCount": minecount,
         "fields": fieldcount
@@ -1832,7 +1834,7 @@ function minebet(betsize, fieldcount, minecount){
 	fetch('https://' + window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => data(json))
@@ -1855,7 +1857,7 @@ function kenobet(betsize, kenoselected, kenorisk){
 	var body = {
 		variables:{
         "amount": betsize,
-        "currency": document.getElementById('wdbMenuCoin').value,
+        "currency": currency,
         "identifier": randomString(21),
         "risk": kenorisk,
         "numbers": kenoselected
@@ -1866,7 +1868,7 @@ function kenobet(betsize, kenoselected, kenorisk){
 	fetch('https://' + window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => data(json))
@@ -1889,7 +1891,7 @@ function plinkobet(betsize, plinkorows, plinkorisk){
 	var body = {
 		variables:{
         "amount": betsize,
-        "currency": document.getElementById('wdbMenuCoin').value,
+        "currency": currency,
         "identifier": randomString(21),
         "risk": plinkorisk,
         "rows": plinkorows
@@ -1900,7 +1902,7 @@ function plinkobet(betsize, plinkorows, plinkorisk){
 	fetch('https://' + window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => data(json))
@@ -1923,7 +1925,7 @@ function wheelbet(betsize, wheelsegments, wheelrisk){
 	var body = {
 		variables:{
         "amount": betsize,
-        "currency": document.getElementById('wdbMenuCoin').value,
+        "currency": currency,
         "identifier": randomString(21),
         "risk": wheelrisk,
         "segments": wheelsegments
@@ -1934,7 +1936,7 @@ function wheelbet(betsize, wheelsegments, wheelrisk){
 	fetch('https://' + window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => data(json))
@@ -1981,7 +1983,7 @@ function roulettebet(selection){
 	
 	var body = {
 		variables:{
-        "currency": document.getElementById('wdbMenuCoin').value,
+        "currency": currency,
         "identifier": randomString(21),
         "numbers": roulette_number,
 		"colors": roulette_color,
@@ -1995,7 +1997,7 @@ function roulettebet(selection){
 	fetch('https://' +  window.location.host + '/_api/graphql', {
 		method: 'post',
 		body:    JSON.stringify(body),
-		headers: { 'Content-Type': 'application/json','x-access-token': getCookie("session")},
+		headers: { 'Content-Type': 'application/json','x-access-token': token},
 	})
 	.then(res => res.json())
 	.then(json => data(json))
