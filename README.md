@@ -26,6 +26,12 @@ chance = 98
 dobet = function(){
  //strategy code
 }
+
+or:
+
+function dobet(){
+ //strategy code
+}
 ```
 
 
