@@ -1,5 +1,5 @@
 # bot4stake  <br /> 
-a javascript coded bot for Stake, Primedice, copy-paste in the console. (Dice, Limbo, Crash, Slide, Keno, Plinko, Mines)<br />
+a javascript coded bot for Stake, Primedice, copy-paste in the console. (Dice, Limbo, Crash, Slide, Keno, Plinko, Mines, Roulette, Wheel, Baccarat, Dragontower)<br />
 the strategy script must be coded in javascript, and not Lua script. 
 
 # Videos: <br /> 
@@ -72,6 +72,20 @@ game = "wheel"
 nextbet = 0
 risk = "low"
 segments = "10"
+ ```
+<b>baccarat:</b>
+```javascript
+game = "baccarat"
+player = 0.001
+banker = 0
+tie = 0
+ ```
+<b>dragon tower:</b>
+```javascript
+game = "dragontower"
+nextbet = 0
+difficulty = "easy"
+eggs = [0,1]
  ```
 <b>Roulette:</b>
 ```javascript
