@@ -79,6 +79,16 @@ let segments = 10
 let chips = [{"value":"colorBlack", "amount":0.0001}]
 let multiplier_start = 1
  
+let kenorisk = risk
+let	kenoselected = numbers
+let	minecount = mines
+let	fieldcount = fields
+let	plinkorows = rows
+let	plinkorisk = risk
+let	wheelrisk = risk
+let	wheelsegments = segments
+let	selection = chips
+ 
  function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
@@ -3842,9 +3852,7 @@ function start(){
 		}
 		game = document.getElementById("gameselect").value;
 		var evalcode = editor.getValue();
-		setTimeout(evalcode, 1);
-		
-	kenorisk = risk
+		setTimeout(evalcode + `;kenorisk = risk
 	kenoselected = numbers
 	minecount = mines
 	fieldcount = fields
@@ -3956,6 +3964,10 @@ function start(){
 	} else if(selectedGame == "slide"){
 		
 	}
+		
+	`, 0);
+		
+	
  
  drawChart();
 
