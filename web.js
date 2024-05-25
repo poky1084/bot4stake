@@ -2216,7 +2216,7 @@ function data(json){
 			let betbanker = json.data.baccaratBet.state.banker
 			let betplayer = json.data.baccaratBet.state.player
 			if(bettie > 0){
-				bettext += "tie|"
+				bettext += "|"
 			}
 			if(betbanker > 0){
 				bettext += "b|"
