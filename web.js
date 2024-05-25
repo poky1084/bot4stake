@@ -1458,7 +1458,11 @@ gameselection.addEventListener('change', function(e) {
 	game = document.getElementById("gameselect").value;
 	stop();
 	document.getElementById("result").innerHTML = ""
-
+	if(theme == "light"){
+		document.getElementById("result").style.color = "black";
+	} else {
+		document.getElementById("result").style.color = "white";
+	}
 }, false);
 
 var themebots = document.getElementById("themebot");
@@ -1509,7 +1513,11 @@ themebots.addEventListener('change', function(e) {
 		document.getElementsByClassName("CodeMirror")[0].style.color = "black"
 		document.getElementById("result").style.color = "white";
 	}
-
+	if(theme == "light"){
+		document.getElementById("result").style.color = "black";
+	} else {
+		document.getElementById("result").style.color = "white";
+	}
 }, false);
 
 var wdbMenuCoins = document.getElementById("wdbMenuCoin");
@@ -1607,6 +1615,11 @@ function updateChart() {
 function resetChart() {
     betcount = 0;
     profit_total = 0;
+	if(theme == "light"){
+		document.getElementById("result").style.color = "black";
+	} else {
+		document.getElementById("result").style.color = "white";
+	}
     return drawChart();
 }
 
