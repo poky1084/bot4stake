@@ -156,8 +156,10 @@ function getMyJS(url, callback){
 	xhr.onload = callback;
 	xhr.send();
 }
-addJs('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/codemirror.min.js', () => {	addJs('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js', () => {	})})
-addJs('https://canvasjs.com/assets/script/canvasjs.min.js', () => {  })
+addJs('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/codemirror.min.js', () => {	
+addJs('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js', () => {	
+addJs('https://canvasjs.com/assets/script/canvasjs.min.js', () => { addBot() })})})
+
 var editor = ''
 addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/darcula.min.css', () => {})
 addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css', () => {})
@@ -165,7 +167,7 @@ addCss('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.
 
 let theme = "light"
 
-setTimeout(() => {
+function addBot(){
 	
 	/* if(window.location.host.includes("stake")){
 		if(document.querySelectorAll('[data-test="left-sidebar"]')[0] != null){
@@ -264,7 +266,7 @@ if (localStorage.getItem("themebot") != null) {
 
 userBalances();
 startScoket();
-}, "3000");
+};
 
 // drag and drop bot
 var draggin = false
