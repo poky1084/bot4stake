@@ -1446,6 +1446,7 @@ function resetAll(){
  resetChart();
  deleteTable();
  deleteLogs();
+ userBalances();
 }
 
 function deleteLogs(){
