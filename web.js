@@ -269,7 +269,7 @@ startScoket();
 
 	const isMobile = navigator.maxTouchPoints > 2;
 	if (isMobile) {
-		document.getElementById("window").style.overflowY = "auto";
+		document.getElementById("window").style.overflowY = "visible";
 		document.getElementById("window").style.overflowX = "visible";
 		document.getElementById("window").style.width = "570px"
 		document.getElementById("wdbLog").style.width = "570px"
