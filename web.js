@@ -267,7 +267,7 @@ if (localStorage.getItem("themebot") != null) {
 userBalances();
 startScoket();
 
-	const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	const isMobile = navigator.maxTouchPoints > 2;
 	if (isMobile) {
 		document.getElementById("window").style.overflowY = "auto";
 		document.getElementById("window").style.overflowX = "visible";
