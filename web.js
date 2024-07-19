@@ -3453,9 +3453,9 @@ function data(json){
 			
 			lastBet.amount = json.data.minesBet.amount;
 			lastBet.payoutMultiplier = json.data.minesBet.payoutMultiplier;
-			//lastBet.Roll = json.data.minesBet.state.result;
+			lastBet.Roll = json.data.minesBet.state.mines;
 			lastBet.payout = json.data.minesBet.payout;
-			//lastBet.target = json.data.primediceRoll.state.target;
+			
 			
 		
 			var rounds = json.data.minesBet.state.rounds;
@@ -3464,6 +3464,8 @@ function data(json){
 			rounds.forEach(function(round){
 				str_field.push(round.field)
 			});
+			
+			lastBet.target = str_field;
 			
 			var hitmines = str_field.filter(function(n) {
 				return minefield.indexOf(n) !== -1;
