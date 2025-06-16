@@ -1,3 +1,7 @@
+# IF you are looking for a more recent updated bot, get #evilbot below: <br /> 
+https://github.com/poky1084/evilbot
+<br />
+<br />
 # bot4stake  <br /> 
 a javascript coded bot for Stake, Primedice, copy-paste in the console. (Dice, Limbo, Crash, Slide, Keno, Plinko, Mines, Roulette, Wheel, Baccarat, Dragontower)<br />
 the strategy script must be coded in javascript, and not Lua script. 
