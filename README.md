@@ -2,7 +2,6 @@
 https://github.com/poky1084/evilbot
 <br />
 <b>Donate:</b> https://ko-fi.com/poky <br />
-https://cwallet.com/t/YHT4YK3M
 <br />
 # bot4stake  <br /> 
 a javascript coded bot for Stake, Primedice, copy-paste in the console. (Dice, Limbo, Crash, Slide, Keno, Plinko, Mines, Roulette, Wheel, Baccarat, Dragontower)<br />
